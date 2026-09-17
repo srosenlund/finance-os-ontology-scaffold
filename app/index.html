@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Personal Finance Dashboard</title>
+<link rel="stylesheet" href="css/font.css"/>
+<link rel="stylesheet" href="css/tokens.css"/>
+<link rel="stylesheet" href="css/life-os-base.css"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="stylesheet" href="css/life-os-app.css"/>
+<link rel="stylesheet" href="css/sot-map.css"/>
+</head>
+<body>
+<a class="skip-link" href="#mainContent">Spring til indhold</a>
+<header class="top">
+  <div class="brand">
+    <div class="life-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true"><g fill="currentColor"><path d="M9 8h17a3 3 0 0 1 3 3v18H11a3 3 0 0 1-3-3V9a1 1 0 0 1 1-1Z"/><path d="M38 8h9a9 9 0 0 1 9 9v9a3 3 0 0 1-3 3H35V11a3 3 0 0 1 3-3Z"/><path d="M11 35h18v18a3 3 0 0 1-3 3h-9a9 9 0 0 1-9-9v-9a3 3 0 0 1 3-3Z"/><path d="M35 35h18a3 3 0 0 1 3 3v17a1 1 0 0 1-1 1H38a3 3 0 0 1-3-3Z"/></g></svg><span>Personal <span class="muted">Finance</span></span></div>
+    <h1>Personal Finance Dashboard</h1>
+    <p class="meta" id="metaLine">Fiktiv husstand · demo-data</p>
+  </div>
+  <nav class="tabs" role="tablist" id="navTabs">
+    <a href="#/overblik" class="tab is-active" data-view="overblik" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4Zm9 0h7v5H13ZM4 13h7v7H4Zm9-2h7v9H13Z"/></svg>Overblik</a>
+    <a href="#/konti" class="tab" data-view="konti" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9m5 10V5m6 14v-7m5 7V3M2 22h20"/></svg>Konti</a>
+    <a href="#/ingest" class="tab" data-view="ingest" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8 6 4h12l2 4v11H4Zm0 0h16M9 14h6"/></svg>Ingest</a>
+    <a href="#/forsikring" class="tab" data-view="forsikring" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 7v6c0 5-3.4 7.6-8 9-4.6-1.4-8-4-8-9V7Z"/></svg>Forsikring</a>
+    <a href="#/bil" class="tab" data-view="bil" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11 7 7h10l2 4v6H5Zm2 6h.01M17 17h.01M3 13h18"/></svg>Bil</a>
+    <a href="#/bolig" class="tab" data-view="bolig" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg>Bolig</a>
+    <a href="#/skat" class="tab" data-view="skat" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l5 5v13H7ZM15 3v5h5M9 13h6M9 17h4"/></svg>SKAT</a>
+    <a href="#/transaktioner" class="tab" data-view="transaktioner" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Transaktioner</a>
+    <a href="#/aarsbudget" class="tab" data-view="aarsbudget" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9Z"/></svg>Årsbudget</a>
+    <a href="#/ontologi" class="tab" data-view="ontologi" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6M8.6 13.5 15.4 17M8.6 10.5 15.4 7"/></svg>Ontologi</a>
+    <a href="#/indstillinger" class="tab" data-view="indstillinger" role="tab"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 7V4m0 3v3m8 7v-3m0 3v3"/></svg>Indstillinger</a>
+  </nav>
+  <button type="button" class="btn" id="themeToggle">
+    <svg class="icon theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/></svg>
+    <svg class="icon theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 15A9 9 0 0 1 9 3a9 9 0 1 0 11 12"/></svg>
+    <span id="themeLabel">Lyst tema</span>
+  </button>
+  <div class="nav-status" id="navStatus"></div>
+</header>
+<div class="kpi-strip" id="kpiStrip" hidden aria-label="Kontrolplan"></div>
+<main id="mainContent" tabindex="-1">
+  <section id="view-overblik" class="view is-active"></section>
+  <section id="view-konti" class="view" hidden></section>
+  <section id="view-ingest" class="view" hidden></section>
+  <section id="view-forsikring" class="view" hidden></section>
+  <section id="view-bil" class="view" hidden></section>
+  <section id="view-bolig" class="view" hidden></section>
+  <section id="view-skat" class="view" hidden></section>
+  <section id="view-transaktioner" class="view" hidden></section>
+  <section id="view-aarsbudget" class="view" hidden></section>
+  <section id="view-ontologi" class="view" hidden></section>
+  <section id="view-indstillinger" class="view" hidden></section>
+</main>
+<aside id="drawer" class="drawer" hidden></aside>
+<div id="toast" class="toast" hidden></div>
+<script src="js/domain.js"></script>
+<script src="js/sot-map.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "format": "bank-view/1",
+  "source": "example",
+  "note": "Kun fake demo — erstat ved at skrive local/bank-view.json via BankMCP (gitignoreret).",
+  "as_of": "2026-09-17T10:00:00Z",
+  "accounts": [
+    {
+      "id": "ex-checking",
+      "label": "Daglig konto",
+      "currency": "DKK",
+      "booked_balance": 12450.25
+    },
+    {
+      "id": "ex-savings",
+      "label": "Opsparing",
+      "currency": "DKK",
+      "booked_balance": 82000.0
+    },
+    {
+      "id": "ex-neo",
+      "label": "Neobank forbrug",
+      "currency": "EUR",
+      "booked_balance": 312.4
+    }
+  ],
+  "transactions": [
+    {
+      "account_label": "Daglig konto",
+      "booked_at": "2026-09-16",
+      "amount": -189.0,
+      "currency": "DKK",
+      "description": "Dagligvarer"
+    },
+    {
+      "account_label": "Daglig konto",
+      "booked_at": "2026-09-15",
+      "amount": -49.0,
+      "currency": "DKK",
+      "description": "Transport"
+    },
+    {
+      "account_label": "Neobank forbrug",
+      "booked_at": "2026-09-14",
+      "amount": -12.5,
+      "currency": "EUR",
+      "description": "Kaffe"
+    },
+    {
+      "account_label": "Daglig konto",
+      "booked_at": "2026-09-01",
+      "amount": 28000.0,
+      "currency": "DKK",
+      "description": "Løn"
+    }
+  ]
+}

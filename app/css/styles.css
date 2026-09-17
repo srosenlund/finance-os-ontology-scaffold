@@ -1,0 +1,373 @@
+/* Application layer: navigation, filters, drawer, modal. Tokens come from Life OS. */
+
+* { box-sizing: border-box; }
+
+body { padding: 0 0 var(--sp-7); }
+
+/* ---- Toplinje og navigation ---- */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: var(--rule-strong);
+  padding: var(--sp-4) var(--sp-5) var(--sp-3);
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+.brand h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 40;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--track-heading);
+}
+.top .meta { margin: var(--sp-1) 0 0; font-size: var(--fs-caption); color: var(--muted); }
+
+.tabs { display: flex; gap: var(--sp-5); flex-wrap: wrap; grid-column: 1 / -1; }
+.tab, a.tab {
+  padding: var(--sp-2) 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--r-0);
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tab:hover { color: var(--ink); }
+.tab.is-active { color: var(--ink); border-bottom-color: var(--accent); }
+.nav-status {
+  grid-column: 2;
+  justify-self: end;
+  font-size: var(--fs-caption);
+  color: var(--warn);
+}
+
+main { max-width: var(--measure-wide); margin: 0 auto; padding: var(--sp-5); }
+.view[hidden] { display: none !important; }
+.modal[hidden], .drawer[hidden], .toast[hidden] { display: none !important; }
+
+h2 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: var(--sp-6) 0 var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: var(--rule-strong);
+}
+h3 { font-size: var(--fs-h4); margin: var(--sp-4) 0 var(--sp-2); color: var(--ink); }
+
+/* ---- KPI-strip under toplinjen ---- */
+.kpi-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: center;
+  max-width: var(--measure-wide);
+  margin: var(--sp-3) auto 0;
+  padding: 0 var(--sp-5);
+}
+.kpi-strip .chip strong { color: var(--ink); font-weight: var(--fw-semibold); }
+.kpi-strip .chip.warn { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
+
+/* ---- KPI-felter. Temaets .kpi er selve gitteret, appens er én celle. ---- */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0;
+  margin: var(--sp-4) 0 var(--sp-6);
+  border-top: var(--rule-strong);
+  border-bottom: var(--rule-strong);
+}
+.kpis .kpi {
+  display: block;
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) 0;
+  border: 0;
+  border-right: var(--rule);
+  border-radius: var(--r-0);
+  background: none;
+}
+.kpis .kpi:last-child { border-right: 0; }
+.kpis .kpi .label {
+  display: block;
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-2);
+}
+.kpis .kpi .value {
+  display: block;
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 40;
+  font-size: var(--fs-stat);
+  font-weight: var(--fw-regular);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ---- Tabeller. Temaet styler th/td; her kun app-adfærd. ---- */
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-table); }
+th { position: sticky; top: 0; z-index: 1; }
+th, td { padding-left: 0; padding-right: var(--sp-4); }
+tr:last-child td { border-bottom: 0; }
+tr.clickable { cursor: pointer; }
+tr.clickable:hover td { background: var(--paper-2); }
+tr.rowSel td { background: var(--accent-soft); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+/* Temaet nulstiller allerede padding paa sidste kolonne. At goere det paa hver
+   tal-kolonne klistrer den sammen med naeste overskrift. */
+th:last-child, td:last-child { padding-right: 0; }
+/* Datokolonnen i transaktionstabellen er lige praecis for smal til at
+   ISO-datoen bliver paa én linje. Sektionens id ligger fast i skabelonen. */
+#view-transaktioner table td:nth-child(2) { white-space: nowrap; }
+.neg { color: var(--neg); }
+.pos { color: var(--pos); }
+.muted { color: var(--muted); }
+.sub { font-size: var(--fs-caption); color: var(--muted); }
+.role { font-size: var(--fs-caption); color: var(--muted); }
+
+.badge {
+  display: inline-block;
+  margin-right: var(--sp-1);
+  padding: 0 var(--sp-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-chip);
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.badge.xfer { border-color: var(--warn); color: var(--warn); }
+.badge.ovr { border-color: var(--accent); color: var(--accent); }
+
+/* ---- Filtre, knapper, værktøjslinjer ---- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  align-items: end;
+  margin: var(--sp-4) 0;
+  padding: var(--sp-3) 0;
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+}
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.filters input, .filters select, .filters button, .btn, .bulkbar select, .rule-row input, .rule-row select {
+  font: inherit;
+  font-size: var(--fs-table);
+  background: var(--raised);
+  color: var(--ink);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-0);
+  padding: var(--sp-1) var(--sp-2);
+}
+.filters button, .btn { cursor: pointer; text-transform: uppercase; font-size: var(--fs-label); font-weight: var(--fw-semibold); letter-spacing: var(--track-label); padding: var(--sp-2) var(--sp-3); }
+.filters button:hover, .btn:hover { border-color: var(--ink-2); }
+.btn.primary { border-color: var(--accent); background: var(--accent); color: var(--paper); }
+.btn.primary:hover { border-color: var(--accent); filter: brightness(1.08); }
+.btn.danger { border-color: var(--neg); color: var(--neg); }
+.toolbar { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin: var(--sp-3) 0 var(--sp-4); }
+.pager {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  justify-content: flex-end;
+  margin: var(--sp-3) 0;
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+.bulkbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: end;
+  margin: var(--sp-3) 0;
+  padding: var(--sp-3) 0;
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+}
+
+/* Et løst .kpi uden .kpis-forælder findes i filterlinjen. Uden det her
+   rammer temaets .kpi, som er selve gitteret, og tegner løsrevne streger. */
+.filters .kpi {
+  display: block;
+  margin: 0;
+  border: 0;
+  border-radius: var(--r-0);
+  background: none;
+}
+.filters .kpi .label {
+  display: block;
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.filters .kpi .value {
+  display: block;
+  font-family: var(--serif);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* .kpi-strip genbruges inde i budget-udfoldningen som en almindelig blok. */
+.deal-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: var(--sp-5); margin-top: var(--sp-4); }
+.deal-kpis .kpi-strip { display: block; max-width: none; margin: 0; padding: 0; }
+.deal-kpis h4 { margin: 0 0 var(--sp-2); }
+
+/* ---- Overblik: transfer-hub og konto-kort ---- */
+.hub {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+  padding: var(--sp-4) 0;
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+}
+.hub .col { font-size: var(--fs-table); }
+.hub .center {
+  text-align: center;
+  padding-top: var(--sp-2);
+  font-family: var(--serif);
+  font-size: var(--fs-h3);
+  color: var(--accent);
+}
+.hub li { margin: var(--sp-1) 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0; border-top: var(--rule); }
+.cards .card {
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) 0;
+  border: 0;
+  border-bottom: var(--rule);
+  border-right: var(--rule);
+  border-radius: var(--r-0);
+  background: none;
+  cursor: pointer;
+}
+.cards .card:hover { background: var(--paper-2); }
+.cards .card .ttl {
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-2);
+}
+.cards .card .amt {
+  display: block;
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 40;
+  font-size: var(--fs-stat);
+  font-weight: var(--fw-regular);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.cards .card .sub { margin-top: var(--sp-1); }
+.cards .card.system .ttl { color: var(--accent); }
+
+.expand { margin-top: var(--sp-4); padding: var(--sp-4) 0; border-top: var(--rule-strong); }
+.top3 { margin-top: var(--sp-4); }
+.top3 h4 { margin: 0 0 var(--sp-2); }
+.bar { height: 4px; margin-top: var(--sp-2); background: var(--line); overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--chart-1); }
+
+/* ---- Drawer, modal, toast. Ingen skygger: temaet har ingen. ---- */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 40;
+  width: min(30rem, 100%);
+  height: 100%;
+  overflow: auto;
+  padding: var(--sp-5);
+  background: var(--raised);
+  border-left: var(--rule-strong);
+}
+.drawer h3 { margin-top: 0; }
+.drawer .row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: var(--sp-2);
+  margin: var(--sp-1) 0;
+  font-size: var(--fs-table);
+}
+.drawer .row .k { color: var(--muted); }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-5);
+  background: color-mix(in srgb, var(--ink) 55%, transparent);
+}
+.modal .panel {
+  width: min(54rem, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: var(--sp-5);
+  background: var(--raised);
+  border: var(--rule-strong);
+  border-radius: var(--r-0);
+}
+.toast {
+  position: fixed;
+  bottom: var(--sp-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-chip);
+  font-size: var(--fs-table);
+}
+
+/* ---- Regel-editor ---- */
+.rule-row {
+  display: grid;
+  grid-template-columns: 4rem 5rem 1fr 9rem 5rem 6rem;
+  gap: var(--sp-2);
+  align-items: center;
+  margin: var(--sp-2) 0;
+  font-size: var(--fs-table-s);
+}
+.rule-row input, .rule-row select { width: 100%; font-size: var(--fs-table-s); }
+
+.notes { font-size: var(--fs-table); color: var(--muted); }
+.notes li { margin: var(--sp-1) 0; }
+.workbench { margin-top: var(--sp-5); }
+
+@media (max-width: 45rem) {
+  .top { grid-template-columns: 1fr; }
+  .hub { grid-template-columns: 1fr; }
+  .rule-row { grid-template-columns: 1fr 1fr; }
+  .nav-status { grid-column: 1; justify-self: start; }
+}

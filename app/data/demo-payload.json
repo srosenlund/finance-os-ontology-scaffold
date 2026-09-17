@@ -1,0 +1,5021 @@
+{
+  "format": "pfd-demo-payload/1",
+  "title": "Personal Finance Dashboard",
+  "as_of": "2026-09-01",
+  "note": "Fiktiv husstand. Nettoindkomst ca. 25.000 kr. om måneden. Ikke live data.",
+  "kpis": {
+    "accounts": 4,
+    "txns": 400,
+    "rules": 8,
+    "transfer_edges": 2,
+    "years": {
+      "2024": 150,
+      "2025": 150,
+      "2026": 100
+    }
+  },
+  "accounts": [
+    {
+      "id": "daily",
+      "label": "Daglig konto",
+      "role": "spending",
+      "currency": "DKK",
+      "booked": 6240.5,
+      "iban_last4": "1234",
+      "txn_count": 208
+    },
+    {
+      "id": "savings",
+      "label": "Opsparing",
+      "role": "other",
+      "currency": "DKK",
+      "booked": 68400.0,
+      "iban_last4": "5678",
+      "txn_count": 32
+    },
+    {
+      "id": "bills",
+      "label": "Regninger",
+      "role": "bills",
+      "currency": "DKK",
+      "booked": 3180.0,
+      "iban_last4": "9012",
+      "txn_count": 128
+    },
+    {
+      "id": "neo",
+      "label": "Neobank forbrug",
+      "role": "fx",
+      "currency": "EUR",
+      "booked": 148.6,
+      "iban_last4": "4455",
+      "txn_count": 32
+    }
+  ],
+  "txns": [
+    {
+      "id": "t001",
+      "d": "2024-01-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25200.06,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t002",
+      "d": "2024-01-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8584.48,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t007",
+      "d": "2024-01-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -418.11,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t009",
+      "d": "2024-01-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -472.66,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t003",
+      "d": "2024-01-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1407.09,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t010",
+      "d": "2024-01-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -345.78,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t004",
+      "d": "2024-01-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3631.65,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t008",
+      "d": "2024-01-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -687.99,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t005",
+      "d": "2024-01-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -878.09,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t011",
+      "d": "2024-01-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -211.81,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t006",
+      "d": "2024-01-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -238.18,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t012",
+      "d": "2024-01-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2024.68,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t013",
+      "d": "2024-01-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2024.68,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t014",
+      "d": "2024-02-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25298.16,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t015",
+      "d": "2024-02-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8569.22,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t020",
+      "d": "2024-02-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -424.47,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t022",
+      "d": "2024-02-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -477.99,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t016",
+      "d": "2024-02-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1378.55,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t023",
+      "d": "2024-02-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.69,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t017",
+      "d": "2024-02-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3529.9,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t021",
+      "d": "2024-02-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -707.92,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t018",
+      "d": "2024-02-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -857.46,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t019",
+      "d": "2024-02-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -238.48,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t024",
+      "d": "2024-02-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1997.39,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t025",
+      "d": "2024-02-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1997.39,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t026",
+      "d": "2024-03-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25244.3,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t027",
+      "d": "2024-03-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8518.68,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t032",
+      "d": "2024-03-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -433.65,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t034",
+      "d": "2024-03-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -479.25,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t028",
+      "d": "2024-03-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1176.63,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t035",
+      "d": "2024-03-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -344.19,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t029",
+      "d": "2024-03-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3463.88,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t033",
+      "d": "2024-03-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -723.81,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t030",
+      "d": "2024-03-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -858.51,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t036",
+      "d": "2024-03-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -199.22,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t031",
+      "d": "2024-03-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -244.64,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t037",
+      "d": "2024-03-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1971.44,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t038",
+      "d": "2024-03-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1971.44,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t039",
+      "d": "2024-04-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25065.94,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t040",
+      "d": "2024-04-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8458.62,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t045",
+      "d": "2024-04-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -440.97,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t047",
+      "d": "2024-04-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -475.8,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t041",
+      "d": "2024-04-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1154.63,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t048",
+      "d": "2024-04-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -339.56,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t042",
+      "d": "2024-04-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3467.23,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t046",
+      "d": "2024-04-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -727.57,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t043",
+      "d": "2024-04-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -880.7,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t044",
+      "d": "2024-04-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -253.54,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t049",
+      "d": "2024-04-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1960.04,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t050",
+      "d": "2024-04-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1960.04,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t051",
+      "d": "2024-05-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24853.96,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t052",
+      "d": "2024-05-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8419.65,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t057",
+      "d": "2024-05-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -442.7,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t059",
+      "d": "2024-05-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -469.39,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t053",
+      "d": "2024-05-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1155.74,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t060",
+      "d": "2024-05-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -335.14,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t054",
+      "d": "2024-05-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3538.25,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t058",
+      "d": "2024-05-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -717.27,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t055",
+      "d": "2024-05-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -912.73,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t061",
+      "d": "2024-05-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -188.01,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t056",
+      "d": "2024-05-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -260.63,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t062",
+      "d": "2024-05-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1969.01,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t063",
+      "d": "2024-05-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1969.01,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t064",
+      "d": "2024-06-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24716.42,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t065",
+      "d": "2024-06-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8421.63,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t070",
+      "d": "2024-06-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -437.96,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t072",
+      "d": "2024-06-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -463.29,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t066",
+      "d": "2024-06-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1059.42,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t073",
+      "d": "2024-06-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -333.21,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t067",
+      "d": "2024-06-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3640.74,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t071",
+      "d": "2024-06-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -698.18,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t068",
+      "d": "2024-06-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -938.27,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t069",
+      "d": "2024-06-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -262.31,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t074",
+      "d": "2024-06-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1993.77,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t075",
+      "d": "2024-06-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1993.77,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t076",
+      "d": "2024-07-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24723.4,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t077",
+      "d": "2024-07-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8463.55,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t082",
+      "d": "2024-07-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -429.16,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t084",
+      "d": "2024-07-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -460.61,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t078",
+      "d": "2024-07-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1093.58,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t085",
+      "d": "2024-07-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -334.73,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t079",
+      "d": "2024-07-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -4010.46,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t083",
+      "d": "2024-07-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -680.01,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t080",
+      "d": "2024-07-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -944.3,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t086",
+      "d": "2024-07-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -198.13,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t081",
+      "d": "2024-07-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -257.71,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t087",
+      "d": "2024-07-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2021.71,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t088",
+      "d": "2024-07-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2021.71,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t089",
+      "d": "2024-08-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24871.35,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t090",
+      "d": "2024-08-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8524.05,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t095",
+      "d": "2024-08-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -420.79,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t097",
+      "d": "2024-08-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -462.72,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t091",
+      "d": "2024-08-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1240.82,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t098",
+      "d": "2024-08-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -338.94,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t092",
+      "d": "2024-08-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -4029.78,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t096",
+      "d": "2024-08-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -672.03,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t093",
+      "d": "2024-08-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -927.76,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t094",
+      "d": "2024-08-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -249.19,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t099",
+      "d": "2024-08-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2038.58,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t100",
+      "d": "2024-08-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2038.58,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t101",
+      "d": "2024-09-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25084.87,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t102",
+      "d": "2024-09-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8572.29,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t107",
+      "d": "2024-09-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -417.11,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t109",
+      "d": "2024-09-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -468.54,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t103",
+      "d": "2024-09-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1247.26,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t110",
+      "d": "2024-09-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -343.69,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t104",
+      "d": "2024-09-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3688.83,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t108",
+      "d": "2024-09-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -678.31,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t105",
+      "d": "2024-09-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -897.07,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t111",
+      "d": "2024-09-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -211.57,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t106",
+      "d": "2024-09-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -241.07,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t112",
+      "d": "2024-09-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2035.79,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t113",
+      "d": "2024-09-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2035.79,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t114",
+      "d": "2024-10-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25255.13,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t115",
+      "d": "2024-10-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8583.69,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t120",
+      "d": "2024-10-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -420.01,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t122",
+      "d": "2024-10-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -475.1,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t116",
+      "d": "2024-10-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1229.61,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t123",
+      "d": "2024-10-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.56,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t117",
+      "d": "2024-10-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3590.61,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t121",
+      "d": "2024-10-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -695.64,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t118",
+      "d": "2024-10-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -867.87,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t119",
+      "d": "2024-10-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -237.51,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t124",
+      "d": "2024-10-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2014.76,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t125",
+      "d": "2024-10-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2014.76,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t126",
+      "d": "2024-11-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25295.36,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t127",
+      "d": "2024-11-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8552.44,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t132",
+      "d": "2024-11-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -427.99,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t134",
+      "d": "2024-11-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -479.07,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t128",
+      "d": "2024-11-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1196.87,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t135",
+      "d": "2024-11-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.08,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t129",
+      "d": "2024-11-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3497.18,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t133",
+      "d": "2024-11-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -715.2,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t130",
+      "d": "2024-11-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -855.05,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t136",
+      "d": "2024-11-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -204.43,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t131",
+      "d": "2024-11-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -240.32,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t137",
+      "d": "2024-11-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1986.21,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t138",
+      "d": "2024-11-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1986.21,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t139",
+      "d": "2024-12-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25185.07,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t140",
+      "d": "2024-12-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8494.46,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t145",
+      "d": "2024-12-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -437.0,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t147",
+      "d": "2024-12-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -478.41,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t141",
+      "d": "2024-12-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1333.73,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t148",
+      "d": "2024-12-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -342.51,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t142",
+      "d": "2024-12-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3456.15,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t146",
+      "d": "2024-12-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -727.01,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t143",
+      "d": "2024-12-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -1009.13,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t144",
+      "d": "2024-12-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -248.05,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t149",
+      "d": "2024-12-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1964.68,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t150",
+      "d": "2024-12-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1964.68,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t151",
+      "d": "2025-01-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24980.45,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t152",
+      "d": "2025-01-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8439.31,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t157",
+      "d": "2025-01-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -442.44,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t159",
+      "d": "2025-01-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -473.47,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t153",
+      "d": "2025-01-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1320.05,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t160",
+      "d": "2025-01-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -337.66,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t154",
+      "d": "2025-01-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3488.43,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t158",
+      "d": "2025-01-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -725.05,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t155",
+      "d": "2025-01-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -892.99,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t161",
+      "d": "2025-01-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -189.41,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t156",
+      "d": "2025-01-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -256.78,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t162",
+      "d": "2025-01-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1961.16,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t163",
+      "d": "2025-01-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1961.16,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t164",
+      "d": "2025-02-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24785.79,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t165",
+      "d": "2025-02-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8415.09,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t170",
+      "d": "2025-02-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -441.54,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t172",
+      "d": "2025-02-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -466.76,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t166",
+      "d": "2025-02-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1330.81,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t173",
+      "d": "2025-02-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -334.0,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t167",
+      "d": "2025-02-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3577.57,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t171",
+      "d": "2025-02-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -710.33,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t168",
+      "d": "2025-02-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -924.42,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t169",
+      "d": "2025-02-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -262.06,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t174",
+      "d": "2025-02-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1977.43,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t175",
+      "d": "2025-02-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1977.43,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t176",
+      "d": "2025-03-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24700.31,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t177",
+      "d": "2025-03-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8434.14,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t182",
+      "d": "2025-03-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -434.76,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t184",
+      "d": "2025-03-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -461.7,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t178",
+      "d": "2025-03-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1192.52,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t185",
+      "d": "2025-03-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -333.4,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t179",
+      "d": "2025-03-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3678.15,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t183",
+      "d": "2025-03-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -690.35,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t180",
+      "d": "2025-03-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -943.4,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t186",
+      "d": "2025-03-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -193.23,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t181",
+      "d": "2025-03-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -261.18,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t187",
+      "d": "2025-03-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2005.2,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t188",
+      "d": "2025-03-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2005.2,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t189",
+      "d": "2025-04-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24767.57,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t190",
+      "d": "2025-04-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8486.76,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t195",
+      "d": "2025-04-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -425.55,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t197",
+      "d": "2025-04-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -460.87,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t191",
+      "d": "2025-04-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1226.05,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t198",
+      "d": "2025-04-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -336.16,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t192",
+      "d": "2025-04-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3738.89,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t196",
+      "d": "2025-04-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -675.28,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t193",
+      "d": "2025-04-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -940.27,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t194",
+      "d": "2025-04-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -254.61,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t199",
+      "d": "2025-04-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2030.33,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t200",
+      "d": "2025-04-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2030.33,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t201",
+      "d": "2025-05-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24953.28,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t202",
+      "d": "2025-05-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8546.13,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t207",
+      "d": "2025-05-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -418.61,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t209",
+      "d": "2025-05-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -464.7,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t203",
+      "d": "2025-05-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1246.3,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t210",
+      "d": "2025-05-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -340.88,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t204",
+      "d": "2025-05-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3728.85,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t208",
+      "d": "2025-05-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -672.81,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t205",
+      "d": "2025-05-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -916.61,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t211",
+      "d": "2025-05-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -209.1,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t206",
+      "d": "2025-05-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -245.69,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t212",
+      "d": "2025-05-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2039.99,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t213",
+      "d": "2025-05-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2039.99,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t214",
+      "d": "2025-06-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25162.81,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t215",
+      "d": "2025-06-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8581.98,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t220",
+      "d": "2025-06-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -417.47,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t222",
+      "d": "2025-06-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -471.22,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t216",
+      "d": "2025-06-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1122.95,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t223",
+      "d": "2025-06-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -345.16,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t217",
+      "d": "2025-06-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3653.14,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t221",
+      "d": "2025-06-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -684.2,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t218",
+      "d": "2025-06-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -884.48,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t219",
+      "d": "2025-06-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -238.96,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t224",
+      "d": "2025-06-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2029.28,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t225",
+      "d": "2025-06-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2029.28,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t226",
+      "d": "2025-07-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25289.36,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t227",
+      "d": "2025-07-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8576.06,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t232",
+      "d": "2025-07-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -422.72,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t234",
+      "d": "2025-07-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -477.13,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t228",
+      "d": "2025-07-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1097.71,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t235",
+      "d": "2025-07-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.8,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t229",
+      "d": "2025-07-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3838.35,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t233",
+      "d": "2025-07-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -703.64,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t230",
+      "d": "2025-07-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -860.27,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t236",
+      "d": "2025-07-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -208.78,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t231",
+      "d": "2025-07-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -237.86,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t237",
+      "d": "2025-07-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2003.64,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t238",
+      "d": "2025-07-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2003.64,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t239",
+      "d": "2025-08-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25268.44,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t240",
+      "d": "2025-08-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8531.37,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t245",
+      "d": "2025-08-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -431.68,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t247",
+      "d": "2025-08-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -479.4,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t241",
+      "d": "2025-08-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1183.45,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t248",
+      "d": "2025-08-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -344.98,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t242",
+      "d": "2025-08-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3760.86,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t246",
+      "d": "2025-08-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -721.23,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t243",
+      "d": "2025-08-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -856.3,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t244",
+      "d": "2025-08-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -242.95,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t249",
+      "d": "2025-08-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1976.15,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t250",
+      "d": "2025-08-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1976.15,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t251",
+      "d": "2025-09-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25110.71,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t252",
+      "d": "2025-09-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8470.69,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t257",
+      "d": "2025-09-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -439.78,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t259",
+      "d": "2025-09-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -476.88,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t253",
+      "d": "2025-09-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1157.62,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t260",
+      "d": "2025-09-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -340.62,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t254",
+      "d": "2025-09-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3460.17,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t258",
+      "d": "2025-09-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -727.99,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t255",
+      "d": "2025-09-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -874.61,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t261",
+      "d": "2025-09-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -192.84,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t256",
+      "d": "2025-09-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -251.63,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t262",
+      "d": "2025-09-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1960.81,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t263",
+      "d": "2025-09-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1960.81,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t264",
+      "d": "2025-10-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24896.56,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t265",
+      "d": "2025-10-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8424.95,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t270",
+      "d": "2025-10-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -442.9,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t272",
+      "d": "2025-10-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -470.86,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t266",
+      "d": "2025-10-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1153.39,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t273",
+      "d": "2025-10-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -335.95,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t267",
+      "d": "2025-10-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3518.74,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t271",
+      "d": "2025-10-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -720.49,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t268",
+      "d": "2025-10-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -905.85,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t269",
+      "d": "2025-10-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -259.48,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t274",
+      "d": "2025-10-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1965.45,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t275",
+      "d": "2025-10-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1965.45,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t276",
+      "d": "2025-11-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24735.13,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t277",
+      "d": "2025-11-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8417.46,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t282",
+      "d": "2025-11-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -439.44,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t284",
+      "d": "2025-11-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -464.4,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t278",
+      "d": "2025-11-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1172.91,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t285",
+      "d": "2025-11-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -333.34,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t279",
+      "d": "2025-11-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3618.73,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t283",
+      "d": "2025-11-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -702.55,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t280",
+      "d": "2025-11-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -934.12,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t286",
+      "d": "2025-11-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -189.63,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t281",
+      "d": "2025-11-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -262.5,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t287",
+      "d": "2025-11-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1987.69,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t288",
+      "d": "2025-11-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1987.69,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t289",
+      "d": "2025-12-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24708.69,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t290",
+      "d": "2025-12-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8452.04,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t295",
+      "d": "2025-12-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -431.17,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t297",
+      "d": "2025-12-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -460.79,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t291",
+      "d": "2025-12-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1374.24,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t298",
+      "d": "2025-12-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -334.13,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t292",
+      "d": "2025-12-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3709.17,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t296",
+      "d": "2025-12-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -683.3,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t293",
+      "d": "2025-12-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -1088.99,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t294",
+      "d": "2025-12-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -259.15,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t299",
+      "d": "2025-12-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2016.21,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t300",
+      "d": "2025-12-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2016.21,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t301",
+      "d": "2026-01-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24830.72,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t302",
+      "d": "2026-01-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8511.06,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t307",
+      "d": "2026-01-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -422.31,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t309",
+      "d": "2026-01-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -461.88,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t303",
+      "d": "2026-01-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1404.39,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t310",
+      "d": "2026-01-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -337.91,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t304",
+      "d": "2026-01-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3743.97,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t308",
+      "d": "2026-01-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -672.57,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t305",
+      "d": "2026-01-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -932.94,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t311",
+      "d": "2026-01-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -204.86,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t306",
+      "d": "2026-01-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -251.14,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t312",
+      "d": "2026-01-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2036.47,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t313",
+      "d": "2026-01-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2036.47,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t314",
+      "d": "2026-02-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25039.02,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t315",
+      "d": "2026-02-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8564.44,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t320",
+      "d": "2026-02-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -417.36,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t322",
+      "d": "2026-02-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -467.11,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t316",
+      "d": "2026-02-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1415.99,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t323",
+      "d": "2026-02-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -342.76,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t317",
+      "d": "2026-02-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3705.4,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t321",
+      "d": "2026-02-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -675.81,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t318",
+      "d": "2026-02-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -904.1,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t319",
+      "d": "2026-02-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -242.55,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t324",
+      "d": "2026-02-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2038.14,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t325",
+      "d": "2026-02-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2038.14,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t326",
+      "d": "2026-03-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25227.44,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t327",
+      "d": "2026-03-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8584.98,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t332",
+      "d": "2026-03-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -418.86,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t334",
+      "d": "2026-03-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -473.81,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t328",
+      "d": "2026-03-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1235.13,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t335",
+      "d": "2026-03-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.2,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t329",
+      "d": "2026-03-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3613.11,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t333",
+      "d": "2026-03-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -691.39,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t330",
+      "d": "2026-03-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -873.17,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t336",
+      "d": "2026-03-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -211.44,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t331",
+      "d": "2026-03-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -237.75,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t337",
+      "d": "2026-03-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -2020.37,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t338",
+      "d": "2026-03-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 2020.37,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t339",
+      "d": "2026-04-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25299.94,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t340",
+      "d": "2026-04-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8562.21,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t345",
+      "d": "2026-04-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -426.03,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t347",
+      "d": "2026-04-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -478.57,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t341",
+      "d": "2026-04-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1204.37,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t348",
+      "d": "2026-04-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -346.48,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t342",
+      "d": "2026-04-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3514.14,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t346",
+      "d": "2026-04-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -711.35,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t343",
+      "d": "2026-04-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -855.91,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t344",
+      "d": "2026-04-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -239.2,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t349",
+      "d": "2026-04-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1992.22,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t350",
+      "d": "2026-04-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1992.22,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t351",
+      "d": "2026-05-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25219.58,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t352",
+      "d": "2026-05-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8507.74,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t357",
+      "d": "2026-05-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -435.23,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t359",
+      "d": "2026-05-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -478.96,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t353",
+      "d": "2026-05-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1171.38,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t360",
+      "d": "2026-05-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -343.46,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t354",
+      "d": "2026-05-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3458.93,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t358",
+      "d": "2026-05-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -725.53,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t355",
+      "d": "2026-05-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -861.13,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t361",
+      "d": "2026-05-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -197.67,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t356",
+      "d": "2026-05-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -246.15,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t362",
+      "d": "2026-05-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1968.04,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t363",
+      "d": "2026-05-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1968.04,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t364",
+      "d": "2026-06-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 25027.31,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t365",
+      "d": "2026-06-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8449.32,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t370",
+      "d": "2026-06-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -441.76,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t372",
+      "d": "2026-06-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -474.79,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t366",
+      "d": "2026-06-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1032.98,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t373",
+      "d": "2026-06-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -338.68,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t367",
+      "d": "2026-06-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3475.61,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t371",
+      "d": "2026-06-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -726.7,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t368",
+      "d": "2026-06-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -886.15,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t369",
+      "d": "2026-06-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -255.07,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t374",
+      "d": "2026-06-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1960.14,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t375",
+      "d": "2026-06-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1960.14,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t376",
+      "d": "2026-07-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24821.12,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t377",
+      "d": "2026-07-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8416.73,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t382",
+      "d": "2026-07-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -442.3,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t384",
+      "d": "2026-07-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -468.17,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t378",
+      "d": "2026-07-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1038.54,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t385",
+      "d": "2026-07-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -334.57,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t379",
+      "d": "2026-07-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3843.7,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t383",
+      "d": "2026-07-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -714.26,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t380",
+      "d": "2026-07-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -918.24,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t386",
+      "d": "2026-07-20",
+      "a": "Daglig konto",
+      "c": "Apotek",
+      "amt": -188.04,
+      "cat": "health",
+      "sub": "pharmacy",
+      "x": 0
+    },
+    {
+      "id": "t381",
+      "d": "2026-07-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -261.4,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t387",
+      "d": "2026-07-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1972.56,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t388",
+      "d": "2026-07-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1972.56,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t389",
+      "d": "2026-08-01",
+      "a": "Daglig konto",
+      "c": "Løn",
+      "amt": 24706.1,
+      "cat": "income",
+      "sub": "salary",
+      "x": 0
+    },
+    {
+      "id": "t390",
+      "d": "2026-08-01",
+      "a": "Regninger",
+      "c": "Husleje",
+      "amt": -8426.58,
+      "cat": "housing",
+      "sub": "rent",
+      "x": 0
+    },
+    {
+      "id": "t395",
+      "d": "2026-08-03",
+      "a": "Daglig konto",
+      "c": "Transport",
+      "amt": -436.57,
+      "cat": "transport",
+      "sub": "transit",
+      "x": 0
+    },
+    {
+      "id": "t397",
+      "d": "2026-08-05",
+      "a": "Regninger",
+      "c": "Forsikring",
+      "amt": -462.49,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t391",
+      "d": "2026-08-06",
+      "a": "Regninger",
+      "c": "Forsyning",
+      "amt": -1185.23,
+      "cat": "housing",
+      "sub": "utilities",
+      "x": 0
+    },
+    {
+      "id": "t398",
+      "d": "2026-08-07",
+      "a": "Regninger",
+      "c": "Streaming",
+      "amt": -333.22,
+      "cat": "insurance",
+      "sub": "premium",
+      "x": 0
+    },
+    {
+      "id": "t392",
+      "d": "2026-08-12",
+      "a": "Daglig konto",
+      "c": "Dagligvarer",
+      "amt": -3946.36,
+      "cat": "food",
+      "sub": "groceries",
+      "x": 0
+    },
+    {
+      "id": "t396",
+      "d": "2026-08-16",
+      "a": "Daglig konto",
+      "c": "Brændstof",
+      "amt": -694.56,
+      "cat": "transport",
+      "sub": "fuel",
+      "x": 0
+    },
+    {
+      "id": "t393",
+      "d": "2026-08-18",
+      "a": "Daglig konto",
+      "c": "Restaurant",
+      "amt": -941.02,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t394",
+      "d": "2026-08-22",
+      "a": "Neobank forbrug",
+      "c": "Kaffe",
+      "amt": -261.92,
+      "cat": "food",
+      "sub": "dining",
+      "x": 0
+    },
+    {
+      "id": "t399",
+      "d": "2026-08-28",
+      "a": "Daglig konto",
+      "c": "Overførsel til opsparing",
+      "amt": -1998.96,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    },
+    {
+      "id": "t400",
+      "d": "2026-08-28",
+      "a": "Opsparing",
+      "c": "Overførsel fra daglig",
+      "amt": 1998.96,
+      "cat": "transfer",
+      "sub": "savings",
+      "x": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": "housing",
+      "label_da": "Bolig",
+      "children": [
+        {
+          "id": "rent",
+          "label_da": "Husleje"
+        },
+        {
+          "id": "utilities",
+          "label_da": "Forbrug"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "label_da": "Mad",
+      "children": [
+        {
+          "id": "groceries",
+          "label_da": "Indkøb"
+        },
+        {
+          "id": "dining",
+          "label_da": "Ude"
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "label_da": "Transport",
+      "children": [
+        {
+          "id": "transit",
+          "label_da": "Kollektiv"
+        },
+        {
+          "id": "fuel",
+          "label_da": "Brændstof"
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "label_da": "Forsikring",
+      "children": [
+        {
+          "id": "premium",
+          "label_da": "Præmie"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "label_da": "Helbred",
+      "children": [
+        {
+          "id": "pharmacy",
+          "label_da": "Apotek"
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "label_da": "Indkomst",
+      "children": [
+        {
+          "id": "salary",
+          "label_da": "Løn"
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "label_da": "Overførsel",
+      "children": [
+        {
+          "id": "savings",
+          "label_da": "Opsparing"
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "sections": [
+      {
+        "id": "hus",
+        "label_da": "Hus",
+        "kind": "spend",
+        "children": [
+          {
+            "id": "hus_leje",
+            "label_da": "Husleje"
+          },
+          {
+            "id": "hus_forbrug",
+            "label_da": "Forbrug"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "housing",
+            "subcategory_id": "rent",
+            "budget_child": "hus_leje"
+          },
+          {
+            "category_id": "housing",
+            "subcategory_id": "utilities",
+            "budget_child": "hus_forbrug"
+          }
+        ]
+      },
+      {
+        "id": "mad",
+        "label_da": "Mad",
+        "kind": "spend",
+        "children": [
+          {
+            "id": "mad_indkoeb",
+            "label_da": "Indkøb"
+          },
+          {
+            "id": "mad_ude",
+            "label_da": "Ude at spise"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "food",
+            "subcategory_id": "groceries",
+            "budget_child": "mad_indkoeb"
+          },
+          {
+            "category_id": "food",
+            "subcategory_id": "dining",
+            "budget_child": "mad_ude"
+          }
+        ]
+      },
+      {
+        "id": "transport",
+        "label_da": "Transport",
+        "kind": "spend",
+        "children": [
+          {
+            "id": "tr_kollektiv",
+            "label_da": "Kollektiv"
+          },
+          {
+            "id": "tr_braendstof",
+            "label_da": "Brændstof"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "transport",
+            "subcategory_id": "transit",
+            "budget_child": "tr_kollektiv"
+          },
+          {
+            "category_id": "transport",
+            "subcategory_id": "fuel",
+            "budget_child": "tr_braendstof"
+          }
+        ]
+      },
+      {
+        "id": "forsikring",
+        "label_da": "Forsikring",
+        "kind": "spend",
+        "children": [
+          {
+            "id": "fors_praemie",
+            "label_da": "Præmie"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "insurance",
+            "subcategory_id": "premium",
+            "budget_child": "fors_praemie"
+          }
+        ]
+      },
+      {
+        "id": "diverse",
+        "label_da": "Diverse",
+        "kind": "spend",
+        "children": [
+          {
+            "id": "div_andet",
+            "label_da": "Andet"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "health",
+            "subcategory_id": "pharmacy",
+            "budget_child": "div_andet"
+          }
+        ]
+      },
+      {
+        "id": "indkomst",
+        "label_da": "Indkomst",
+        "kind": "system",
+        "children": [
+          {
+            "id": "inc_loen",
+            "label_da": "Løn"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "income",
+            "subcategory_id": "salary",
+            "budget_child": "inc_loen"
+          }
+        ]
+      },
+      {
+        "id": "intern",
+        "label_da": "Intern overførsel",
+        "kind": "system",
+        "hidden": true,
+        "children": [
+          {
+            "id": "xfer_opsparing",
+            "label_da": "Opsparing"
+          }
+        ],
+        "taxonomy_map": [
+          {
+            "category_id": "transfer",
+            "subcategory_id": "savings",
+            "budget_child": "xfer_opsparing"
+          }
+        ]
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "r-rent",
+      "cat": "housing",
+      "sub": "rent"
+    },
+    {
+      "id": "r-food",
+      "cat": "food",
+      "sub": "groceries"
+    },
+    {
+      "id": "r-sal",
+      "cat": "income",
+      "sub": "salary"
+    },
+    {
+      "id": "r-ins",
+      "cat": "insurance",
+      "sub": "premium"
+    },
+    {
+      "id": "r-tr",
+      "cat": "transport",
+      "sub": "transit"
+    },
+    {
+      "id": "r-fuel",
+      "cat": "transport",
+      "sub": "fuel"
+    },
+    {
+      "id": "r-xfer",
+      "cat": "transfer",
+      "sub": "savings"
+    },
+    {
+      "id": "r-health",
+      "cat": "health",
+      "sub": "pharmacy"
+    }
+  ],
+  "hub_flow": {
+    "hub": "Daglig konto",
+    "incoming": [
+      {
+        "from": "Løn",
+        "evidence": 32
+      }
+    ],
+    "outgoing": [
+      {
+        "to": "Opsparing",
+        "evidence": 32
+      },
+      {
+        "to": "Regninger",
+        "evidence": 128
+      }
+    ]
+  },
+  "housing": {
+    "properties": [
+      {
+        "id": "home-1",
+        "label": "Primær bolig",
+        "use": "Primær bolig",
+        "loans": [
+          {
+            "id": "loan-current",
+            "label": "Current boliglån",
+            "layer": "Current",
+            "balance": 1185000,
+            "payment": 5400,
+            "rate_pct": 3.4,
+            "as_of": "2026-09-01"
+          }
+        ],
+        "liens": [
+          {
+            "id": "lien-1",
+            "label": "Registreret pant",
+            "layer": "Register",
+            "principal": 1480000
+          }
+        ]
+      }
+    ]
+  },
+  "vehicle": {
+    "id": "car-1",
+    "label": "Familiebil",
+    "layer": "Register",
+    "financing_mode": "Lån",
+    "payment": 1450,
+    "rate_pct": 4.1,
+    "layer_finance": "Current"
+  },
+  "insurance": {
+    "policies": [
+      {
+        "id": "pol-home",
+        "label": "Huspolice",
+        "object": "Primær bolig",
+        "premium": 4200,
+        "renewal": "2026-12-01",
+        "layer": "Current"
+      },
+      {
+        "id": "pol-car",
+        "label": "Bilpolice",
+        "object": "Familiebil",
+        "premium": 3600,
+        "renewal": "2026-11-01",
+        "layer": "Current"
+      }
+    ],
+    "deadlines": []
+  },
+  "tax": {
+    "statements": [
+      {
+        "year": 2026,
+        "basis": "advance",
+        "label": "Forskud 2026",
+        "layer": "Current"
+      },
+      {
+        "year": 2025,
+        "basis": "annual",
+        "label": "Årsopgørelse 2025",
+        "layer": "Current"
+      }
+    ],
+    "property_taxes": [
+      {
+        "year": 2026,
+        "label": "Ejendomsskat",
+        "amount": 11800,
+        "layer": "Current"
+      }
+    ]
+  },
+  "sot_map": {
+    "format": "life-os-sot-map/1",
+    "app": "personal-finance-dashboard",
+    "version": "example-2",
+    "note": "High-level eksempel. Systemer er generiske roller — aldrig vendor- eller produktnavne. Ingen live credentials eller personlige identifikatorer.",
+    "systems": [
+      {
+        "id": "cash_source",
+        "name": "Cash-kilde",
+        "role": "Konti og posteringer"
+      },
+      {
+        "id": "property_register",
+        "name": "Ejendomsregister",
+        "role": "Ejendomme og ejerskabsfacts"
+      },
+      {
+        "id": "lien_register",
+        "name": "Pantsætningsregister",
+        "role": "Registrerede panter og hæftelser"
+      },
+      {
+        "id": "market_ref",
+        "name": "Markedsreference",
+        "role": "Serier / referenceinstrumenter knyttet til lån"
+      },
+      {
+        "id": "vehicle_register",
+        "name": "Køretøjsregister",
+        "role": "Køretøjer og identifikatorer"
+      },
+      {
+        "id": "gov_archive",
+        "name": "Offentligt arkiv",
+        "role": "Officiel digital post og skattedokumenter"
+      },
+      {
+        "id": "private_archive",
+        "name": "Privat arkiv",
+        "role": "Privat dokumentarkiv"
+      },
+      {
+        "id": "mail_archive",
+        "name": "Mailarkiv",
+        "role": "Mail-vedhæftninger og kvitteringer"
+      },
+      {
+        "id": "policy_archive",
+        "name": "Policearkiv",
+        "role": "Forsikringsvilkår"
+      },
+      {
+        "id": "settings",
+        "name": "Indstillinger",
+        "role": "Lokale pegepinde og erklæret Current-tilstand"
+      }
+    ],
+    "spines": [
+      {
+        "id": "HUSHOLD",
+        "name": "Hushold",
+        "question": "Hvad flyder på konti, og hvad er årets cash?"
+      },
+      {
+        "id": "BOLIG",
+        "name": "Bolig",
+        "question": "Hvilke ejendomme og hvilke Current-lån er valgt?"
+      },
+      {
+        "id": "MOBILITET",
+        "name": "Mobilitet",
+        "question": "Hvilket køretøj og hvilken finansieringsform?"
+      },
+      {
+        "id": "BESKYTTELSE",
+        "name": "Beskyttelse",
+        "question": "Hvilke policer er aktive?"
+      },
+      {
+        "id": "SKAT",
+        "name": "Skat",
+        "question": "Hvilke skatteopgørelser og ejendomsskat gælder?"
+      },
+      {
+        "id": "FAELLES",
+        "name": "Fælles",
+        "question": "Hvilken identitet, pegepinde og arkivkanaler binder appen?"
+      }
+    ],
+    "entities": [
+      {
+        "id": "household_account",
+        "name": "Konto",
+        "definition": "Lokal konto-rolle født af en cash-kilde.",
+        "spines": [
+          "HUSHOLD"
+        ],
+        "layer": "Cash",
+        "primary_system": "cash_source"
+      },
+      {
+        "id": "txn",
+        "name": "Postering",
+        "definition": "Klassificeret cash-række — ikke Current-kontraktvilkår.",
+        "spines": [
+          "HUSHOLD"
+        ],
+        "layer": "Cash",
+        "primary_system": "cash_source"
+      },
+      {
+        "id": "year_budget",
+        "name": "Årsbudget",
+        "definition": "Årets forbrug pr. kategori — cash-drift.",
+        "spines": [
+          "HUSHOLD"
+        ],
+        "layer": "Cash",
+        "primary_system": "cash_source"
+      },
+      {
+        "id": "property",
+        "name": "Ejendom",
+        "definition": "Ejendomskort fra et ejendomsregister.",
+        "spines": [
+          "BOLIG"
+        ],
+        "layer": "Register",
+        "domain": "housing",
+        "primary_system": "property_register"
+      },
+      {
+        "id": "housing_loan",
+        "name": "Current boliglån",
+        "definition": "Erklæret Current-lån-pegepind plus verificerede vilkår.",
+        "spines": [
+          "BOLIG"
+        ],
+        "layer": "Current",
+        "domain": "housing",
+        "primary_system": "settings"
+      },
+      {
+        "id": "register_lien",
+        "name": "Registreret pant",
+        "definition": "Hæftelse i pantsætningsregister — ikke Current-lånerollen.",
+        "spines": [
+          "BOLIG"
+        ],
+        "layer": "Register",
+        "primary_system": "lien_register"
+      },
+      {
+        "id": "bond_series",
+        "name": "Referenceserie",
+        "definition": "Markedsreference knyttet til et Current-lån.",
+        "spines": [
+          "BOLIG"
+        ],
+        "layer": "Register",
+        "primary_system": "market_ref"
+      },
+      {
+        "id": "vehicle",
+        "name": "Køretøj",
+        "definition": "Køretøj fra et køretøjsregister.",
+        "spines": [
+          "MOBILITET"
+        ],
+        "layer": "Register",
+        "domain": "vehicle",
+        "primary_system": "vehicle_register"
+      },
+      {
+        "id": "vehicle_finance",
+        "name": "Køretøjsfinansiering",
+        "definition": "Finansieringsform og Current-lånevilkår.",
+        "spines": [
+          "MOBILITET"
+        ],
+        "layer": "Current",
+        "domain": "vehicle",
+        "primary_system": "settings"
+      },
+      {
+        "id": "insurance_policy",
+        "name": "Police",
+        "definition": "Aktiv police; arkivdokument er SoT for vilkår.",
+        "spines": [
+          "BESKYTTELSE"
+        ],
+        "layer": "Current",
+        "domain": "insurance",
+        "primary_system": "policy_archive"
+      },
+      {
+        "id": "tax_statement",
+        "name": "Skatteopgørelse",
+        "definition": "Forskud eller årsopgørelse med pegepind.",
+        "spines": [
+          "SKAT"
+        ],
+        "layer": "Current",
+        "domain": "tax",
+        "primary_system": "gov_archive"
+      },
+      {
+        "id": "property_tax",
+        "name": "Ejendomsskat",
+        "definition": "Ejendomsskat for en given ejendom og år.",
+        "spines": [
+          "SKAT",
+          "BOLIG"
+        ],
+        "layer": "Current",
+        "domain": "tax",
+        "primary_system": "gov_archive"
+      },
+      {
+        "id": "archive_doc",
+        "name": "Arkivdokument",
+        "definition": "Understøttende PDF fra offentligt, privat eller mailarkiv.",
+        "spines": [
+          "FAELLES"
+        ],
+        "layer": "Arkiv",
+        "primary_system": "gov_archive"
+      },
+      {
+        "id": "settings_pointer",
+        "name": "SoT-pegepind",
+        "definition": "Eksplicit Current-valg i Indstillinger.",
+        "spines": [
+          "FAELLES"
+        ],
+        "layer": "Current",
+        "primary_system": "settings"
+      }
+    ],
+    "relations": [
+      {
+        "id": "acct_has_txn",
+        "from": "household_account",
+        "to": "txn",
+        "verb": "has",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "txn_feeds_budget",
+        "from": "txn",
+        "to": "year_budget",
+        "verb": "sums_to",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "property_has_loan",
+        "from": "property",
+        "to": "housing_loan",
+        "verb": "has_current",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "property_has_lien",
+        "from": "property",
+        "to": "register_lien",
+        "verb": "has_register",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "loan_has_series",
+        "from": "housing_loan",
+        "to": "bond_series",
+        "verb": "linked_to",
+        "baerekraft": "kun_udledt"
+      },
+      {
+        "id": "lien_not_balance",
+        "from": "register_lien",
+        "to": "housing_loan",
+        "verb": "is_not",
+        "baerekraft": "krydser_systemgrænse"
+      },
+      {
+        "id": "vehicle_has_finance",
+        "from": "vehicle",
+        "to": "vehicle_finance",
+        "verb": "financed_by",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "policy_covers",
+        "from": "insurance_policy",
+        "to": "vehicle",
+        "verb": "may_cover",
+        "baerekraft": "kun_udledt"
+      },
+      {
+        "id": "policy_covers_home",
+        "from": "insurance_policy",
+        "to": "property",
+        "verb": "may_cover",
+        "baerekraft": "kun_udledt"
+      },
+      {
+        "id": "tax_on_property",
+        "from": "property_tax",
+        "to": "property",
+        "verb": "applies_to",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "statement_feeds_tax",
+        "from": "tax_statement",
+        "to": "property_tax",
+        "verb": "reads_into",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "archive_supports_loan",
+        "from": "archive_doc",
+        "to": "housing_loan",
+        "verb": "documents",
+        "baerekraft": "kun_udledt"
+      },
+      {
+        "id": "archive_supports_finance",
+        "from": "archive_doc",
+        "to": "vehicle_finance",
+        "verb": "documents",
+        "baerekraft": "kun_udledt"
+      },
+      {
+        "id": "archive_supports_policy",
+        "from": "archive_doc",
+        "to": "insurance_policy",
+        "verb": "documents",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "pointer_selects_loan",
+        "from": "settings_pointer",
+        "to": "housing_loan",
+        "verb": "points_to",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "pointer_selects_mode",
+        "from": "settings_pointer",
+        "to": "vehicle_finance",
+        "verb": "points_to",
+        "baerekraft": "baerer"
+      },
+      {
+        "id": "cash_not_current_loan",
+        "from": "txn",
+        "to": "housing_loan",
+        "verb": "does_not_replace",
+        "baerekraft": "krydser_systemgrænse"
+      },
+      {
+        "id": "orphan_end",
+        "from": "bond_series",
+        "to": "year_budget",
+        "verb": "missing_path",
+        "baerekraft": "endepunkt_mangler"
+      }
+    ],
+    "source_links": [
+      {
+        "system": "cash_source",
+        "target": "HUSHOLD",
+        "kind": "measured"
+      },
+      {
+        "system": "cash_source",
+        "target": "household_account",
+        "kind": "measured"
+      },
+      {
+        "system": "cash_source",
+        "target": "txn",
+        "kind": "measured"
+      },
+      {
+        "system": "property_register",
+        "target": "BOLIG",
+        "kind": "measured"
+      },
+      {
+        "system": "property_register",
+        "target": "property",
+        "kind": "measured"
+      },
+      {
+        "system": "lien_register",
+        "target": "register_lien",
+        "kind": "measured"
+      },
+      {
+        "system": "market_ref",
+        "target": "bond_series",
+        "kind": "measured"
+      },
+      {
+        "system": "vehicle_register",
+        "target": "MOBILITET",
+        "kind": "measured"
+      },
+      {
+        "system": "vehicle_register",
+        "target": "vehicle",
+        "kind": "measured"
+      },
+      {
+        "system": "gov_archive",
+        "target": "SKAT",
+        "kind": "measured"
+      },
+      {
+        "system": "gov_archive",
+        "target": "archive_doc",
+        "kind": "measured"
+      },
+      {
+        "system": "private_archive",
+        "target": "archive_doc",
+        "kind": "measured"
+      },
+      {
+        "system": "mail_archive",
+        "target": "archive_doc",
+        "kind": "measured"
+      },
+      {
+        "system": "policy_archive",
+        "target": "BESKYTTELSE",
+        "kind": "declared"
+      },
+      {
+        "system": "policy_archive",
+        "target": "insurance_policy",
+        "kind": "declared"
+      },
+      {
+        "system": "settings",
+        "target": "FAELLES",
+        "kind": "declared"
+      },
+      {
+        "system": "settings",
+        "target": "housing_loan",
+        "kind": "declared"
+      },
+      {
+        "system": "settings",
+        "target": "vehicle_finance",
+        "kind": "declared"
+      },
+      {
+        "system": "settings",
+        "target": "settings_pointer",
+        "kind": "declared"
+      }
+    ]
+  },
+  "ingest": {
+    "requirements": {
+      "domains": [
+        {
+          "id": "bolig",
+          "label": "Bolig",
+          "rows": [
+            {
+              "id": "req-home",
+              "label": "Primær bolig",
+              "status": "documented",
+              "entity_id": "home-1",
+              "value": "Primær bolig",
+              "as_of": "2026-09-01",
+              "instruction": "Bekræft kortet for den primære bolig under Bolig.",
+              "next": "Åbn Bolig"
+            },
+            {
+              "id": "req-loan",
+              "label": "Current boliglån",
+              "status": "documented",
+              "entity_id": "loan-current",
+              "value": "1.185.000 kr. restgæld",
+              "as_of": "2026-09-01",
+              "instruction": "Current boliglånsvilkår; cash-husleje er ikke restgæld.",
+              "next": "Åbn Bolig"
+            }
+          ]
+        },
+        {
+          "id": "forsikring",
+          "label": "Forsikring",
+          "rows": [
+            {
+              "id": "req-pol-h",
+              "label": "Huspolice",
+              "status": "documented",
+              "entity_id": "pol-home",
+              "value": "Huspolice · 4.200 kr. / år",
+              "as_of": "2026-09-01",
+              "instruction": "Dokumenterede Current-policevilkår.",
+              "next": "Åbn Forsikring"
+            },
+            {
+              "id": "req-pol-c",
+              "label": "Bilpolice",
+              "status": "documented",
+              "entity_id": "pol-car",
+              "value": "Bilpolice · 3.600 kr. / år",
+              "as_of": "2026-09-01",
+              "instruction": "Dokumenterede Current-policevilkår.",
+              "next": "Åbn Forsikring"
+            }
+          ]
+        },
+        {
+          "id": "bil",
+          "label": "Bil",
+          "rows": [
+            {
+              "id": "req-car",
+              "label": "Familiebil",
+              "status": "documented",
+              "entity_id": "car-1",
+              "value": "Familiebil",
+              "as_of": "2026-09-01",
+              "instruction": "Register-identitet for demo-køretøjet.",
+              "next": "Åbn Bil"
+            },
+            {
+              "id": "req-fin",
+              "label": "Køretøjsfinansiering",
+              "status": "documented",
+              "entity_id": "car-1",
+              "value": "Lån · 1.450 kr. / md",
+              "as_of": "2026-09-01",
+              "instruction": "Current finansieringsvilkår; cash-brændstof er ikke restgæld.",
+              "next": "Åbn Bil"
+            }
+          ]
+        },
+        {
+          "id": "skat",
+          "label": "SKAT",
+          "rows": [
+            {
+              "id": "req-adv",
+              "label": "Forskud 2026",
+              "status": "documented",
+              "entity_id": "2026-advance",
+              "value": "Forskud 2026",
+              "as_of": "2026-01-15",
+              "instruction": "Current skatteopgørelse for forskudsåret.",
+              "next": "Åbn SKAT"
+            },
+            {
+              "id": "req-pt",
+              "label": "Ejendomsskat",
+              "status": "documented",
+              "entity_id": "2026-pt",
+              "value": "11.800 kr.",
+              "as_of": "2026-09-01",
+              "instruction": "Ejendomsskat er Current, ikke Årsbudget-forbrug.",
+              "next": "Åbn SKAT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ls_keys": {
+    "overrides": "pfd-overrides",
+    "rules": "pfd-rules"
+  }
+}

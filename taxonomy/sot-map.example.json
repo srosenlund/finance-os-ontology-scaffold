@@ -1,0 +1,465 @@
+{
+  "format": "life-os-sot-map/1",
+  "app": "personal-finance-dashboard",
+  "version": "example-2",
+  "note": "High-level eksempel. Systemer er generiske roller — aldrig vendor- eller produktnavne. Ingen live credentials eller personlige identifikatorer.",
+  "systems": [
+    {
+      "id": "cash_source",
+      "name": "Cash-kilde",
+      "role": "Konti og posteringer"
+    },
+    {
+      "id": "property_register",
+      "name": "Ejendomsregister",
+      "role": "Ejendomme og ejerskabsfacts"
+    },
+    {
+      "id": "lien_register",
+      "name": "Pantsætningsregister",
+      "role": "Registrerede panter og hæftelser"
+    },
+    {
+      "id": "market_ref",
+      "name": "Markedsreference",
+      "role": "Serier / referenceinstrumenter knyttet til lån"
+    },
+    {
+      "id": "vehicle_register",
+      "name": "Køretøjsregister",
+      "role": "Køretøjer og identifikatorer"
+    },
+    {
+      "id": "gov_archive",
+      "name": "Offentligt arkiv",
+      "role": "Officiel digital post og skattedokumenter"
+    },
+    {
+      "id": "private_archive",
+      "name": "Privat arkiv",
+      "role": "Privat dokumentarkiv"
+    },
+    {
+      "id": "mail_archive",
+      "name": "Mailarkiv",
+      "role": "Mail-vedhæftninger og kvitteringer"
+    },
+    {
+      "id": "policy_archive",
+      "name": "Policearkiv",
+      "role": "Forsikringsvilkår"
+    },
+    {
+      "id": "settings",
+      "name": "Indstillinger",
+      "role": "Lokale pegepinde og erklæret Current-tilstand"
+    }
+  ],
+  "spines": [
+    {
+      "id": "HUSHOLD",
+      "name": "Hushold",
+      "question": "Hvad flyder på konti, og hvad er årets cash?"
+    },
+    {
+      "id": "BOLIG",
+      "name": "Bolig",
+      "question": "Hvilke ejendomme og hvilke Current-lån er valgt?"
+    },
+    {
+      "id": "MOBILITET",
+      "name": "Mobilitet",
+      "question": "Hvilket køretøj og hvilken finansieringsform?"
+    },
+    {
+      "id": "BESKYTTELSE",
+      "name": "Beskyttelse",
+      "question": "Hvilke policer er aktive?"
+    },
+    {
+      "id": "SKAT",
+      "name": "Skat",
+      "question": "Hvilke skatteopgørelser og ejendomsskat gælder?"
+    },
+    {
+      "id": "FAELLES",
+      "name": "Fælles",
+      "question": "Hvilken identitet, pegepinde og arkivkanaler binder appen?"
+    }
+  ],
+  "entities": [
+    {
+      "id": "household_account",
+      "name": "Konto",
+      "definition": "Lokal konto-rolle født af en cash-kilde.",
+      "spines": [
+        "HUSHOLD"
+      ],
+      "layer": "Cash",
+      "primary_system": "cash_source"
+    },
+    {
+      "id": "txn",
+      "name": "Postering",
+      "definition": "Klassificeret cash-række — ikke Current-kontraktvilkår.",
+      "spines": [
+        "HUSHOLD"
+      ],
+      "layer": "Cash",
+      "primary_system": "cash_source"
+    },
+    {
+      "id": "year_budget",
+      "name": "Årsbudget",
+      "definition": "Årets forbrug pr. kategori — cash-drift.",
+      "spines": [
+        "HUSHOLD"
+      ],
+      "layer": "Cash",
+      "primary_system": "cash_source"
+    },
+    {
+      "id": "property",
+      "name": "Ejendom",
+      "definition": "Ejendomskort fra et ejendomsregister.",
+      "spines": [
+        "BOLIG"
+      ],
+      "layer": "Register",
+      "domain": "housing",
+      "primary_system": "property_register"
+    },
+    {
+      "id": "housing_loan",
+      "name": "Current boliglån",
+      "definition": "Erklæret Current-lån-pegepind plus verificerede vilkår.",
+      "spines": [
+        "BOLIG"
+      ],
+      "layer": "Current",
+      "domain": "housing",
+      "primary_system": "settings"
+    },
+    {
+      "id": "register_lien",
+      "name": "Registreret pant",
+      "definition": "Hæftelse i pantsætningsregister — ikke Current-lånerollen.",
+      "spines": [
+        "BOLIG"
+      ],
+      "layer": "Register",
+      "primary_system": "lien_register"
+    },
+    {
+      "id": "bond_series",
+      "name": "Referenceserie",
+      "definition": "Markedsreference knyttet til et Current-lån.",
+      "spines": [
+        "BOLIG"
+      ],
+      "layer": "Register",
+      "primary_system": "market_ref"
+    },
+    {
+      "id": "vehicle",
+      "name": "Køretøj",
+      "definition": "Køretøj fra et køretøjsregister.",
+      "spines": [
+        "MOBILITET"
+      ],
+      "layer": "Register",
+      "domain": "vehicle",
+      "primary_system": "vehicle_register"
+    },
+    {
+      "id": "vehicle_finance",
+      "name": "Køretøjsfinansiering",
+      "definition": "Finansieringsform og Current-lånevilkår.",
+      "spines": [
+        "MOBILITET"
+      ],
+      "layer": "Current",
+      "domain": "vehicle",
+      "primary_system": "settings"
+    },
+    {
+      "id": "insurance_policy",
+      "name": "Police",
+      "definition": "Aktiv police; arkivdokument er SoT for vilkår.",
+      "spines": [
+        "BESKYTTELSE"
+      ],
+      "layer": "Current",
+      "domain": "insurance",
+      "primary_system": "policy_archive"
+    },
+    {
+      "id": "tax_statement",
+      "name": "Skatteopgørelse",
+      "definition": "Forskud eller årsopgørelse med pegepind.",
+      "spines": [
+        "SKAT"
+      ],
+      "layer": "Current",
+      "domain": "tax",
+      "primary_system": "gov_archive"
+    },
+    {
+      "id": "property_tax",
+      "name": "Ejendomsskat",
+      "definition": "Ejendomsskat for en given ejendom og år.",
+      "spines": [
+        "SKAT",
+        "BOLIG"
+      ],
+      "layer": "Current",
+      "domain": "tax",
+      "primary_system": "gov_archive"
+    },
+    {
+      "id": "archive_doc",
+      "name": "Arkivdokument",
+      "definition": "Understøttende PDF fra offentligt, privat eller mailarkiv.",
+      "spines": [
+        "FAELLES"
+      ],
+      "layer": "Arkiv",
+      "primary_system": "gov_archive"
+    },
+    {
+      "id": "settings_pointer",
+      "name": "SoT-pegepind",
+      "definition": "Eksplicit Current-valg i Indstillinger.",
+      "spines": [
+        "FAELLES"
+      ],
+      "layer": "Current",
+      "primary_system": "settings"
+    }
+  ],
+  "relations": [
+    {
+      "id": "acct_has_txn",
+      "from": "household_account",
+      "to": "txn",
+      "verb": "has",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "txn_feeds_budget",
+      "from": "txn",
+      "to": "year_budget",
+      "verb": "sums_to",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "property_has_loan",
+      "from": "property",
+      "to": "housing_loan",
+      "verb": "has_current",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "property_has_lien",
+      "from": "property",
+      "to": "register_lien",
+      "verb": "has_register",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "loan_has_series",
+      "from": "housing_loan",
+      "to": "bond_series",
+      "verb": "linked_to",
+      "baerekraft": "kun_udledt"
+    },
+    {
+      "id": "lien_not_balance",
+      "from": "register_lien",
+      "to": "housing_loan",
+      "verb": "is_not",
+      "baerekraft": "krydser_systemgrænse"
+    },
+    {
+      "id": "vehicle_has_finance",
+      "from": "vehicle",
+      "to": "vehicle_finance",
+      "verb": "financed_by",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "policy_covers",
+      "from": "insurance_policy",
+      "to": "vehicle",
+      "verb": "may_cover",
+      "baerekraft": "kun_udledt"
+    },
+    {
+      "id": "policy_covers_home",
+      "from": "insurance_policy",
+      "to": "property",
+      "verb": "may_cover",
+      "baerekraft": "kun_udledt"
+    },
+    {
+      "id": "tax_on_property",
+      "from": "property_tax",
+      "to": "property",
+      "verb": "applies_to",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "statement_feeds_tax",
+      "from": "tax_statement",
+      "to": "property_tax",
+      "verb": "reads_into",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "archive_supports_loan",
+      "from": "archive_doc",
+      "to": "housing_loan",
+      "verb": "documents",
+      "baerekraft": "kun_udledt"
+    },
+    {
+      "id": "archive_supports_finance",
+      "from": "archive_doc",
+      "to": "vehicle_finance",
+      "verb": "documents",
+      "baerekraft": "kun_udledt"
+    },
+    {
+      "id": "archive_supports_policy",
+      "from": "archive_doc",
+      "to": "insurance_policy",
+      "verb": "documents",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "pointer_selects_loan",
+      "from": "settings_pointer",
+      "to": "housing_loan",
+      "verb": "points_to",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "pointer_selects_mode",
+      "from": "settings_pointer",
+      "to": "vehicle_finance",
+      "verb": "points_to",
+      "baerekraft": "baerer"
+    },
+    {
+      "id": "cash_not_current_loan",
+      "from": "txn",
+      "to": "housing_loan",
+      "verb": "does_not_replace",
+      "baerekraft": "krydser_systemgrænse"
+    },
+    {
+      "id": "orphan_end",
+      "from": "bond_series",
+      "to": "year_budget",
+      "verb": "missing_path",
+      "baerekraft": "endepunkt_mangler"
+    }
+  ],
+  "source_links": [
+    {
+      "system": "cash_source",
+      "target": "HUSHOLD",
+      "kind": "measured"
+    },
+    {
+      "system": "cash_source",
+      "target": "household_account",
+      "kind": "measured"
+    },
+    {
+      "system": "cash_source",
+      "target": "txn",
+      "kind": "measured"
+    },
+    {
+      "system": "property_register",
+      "target": "BOLIG",
+      "kind": "measured"
+    },
+    {
+      "system": "property_register",
+      "target": "property",
+      "kind": "measured"
+    },
+    {
+      "system": "lien_register",
+      "target": "register_lien",
+      "kind": "measured"
+    },
+    {
+      "system": "market_ref",
+      "target": "bond_series",
+      "kind": "measured"
+    },
+    {
+      "system": "vehicle_register",
+      "target": "MOBILITET",
+      "kind": "measured"
+    },
+    {
+      "system": "vehicle_register",
+      "target": "vehicle",
+      "kind": "measured"
+    },
+    {
+      "system": "gov_archive",
+      "target": "SKAT",
+      "kind": "measured"
+    },
+    {
+      "system": "gov_archive",
+      "target": "archive_doc",
+      "kind": "measured"
+    },
+    {
+      "system": "private_archive",
+      "target": "archive_doc",
+      "kind": "measured"
+    },
+    {
+      "system": "mail_archive",
+      "target": "archive_doc",
+      "kind": "measured"
+    },
+    {
+      "system": "policy_archive",
+      "target": "BESKYTTELSE",
+      "kind": "declared"
+    },
+    {
+      "system": "policy_archive",
+      "target": "insurance_policy",
+      "kind": "declared"
+    },
+    {
+      "system": "settings",
+      "target": "FAELLES",
+      "kind": "declared"
+    },
+    {
+      "system": "settings",
+      "target": "housing_loan",
+      "kind": "declared"
+    },
+    {
+      "system": "settings",
+      "target": "vehicle_finance",
+      "kind": "declared"
+    },
+    {
+      "system": "settings",
+      "target": "settings_pointer",
+      "kind": "declared"
+    }
+  ]
+}

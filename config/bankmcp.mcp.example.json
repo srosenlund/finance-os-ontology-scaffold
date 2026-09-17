@@ -1,0 +1,9 @@
+{
+  "comment": "Example local BankMCP MCP server entry. Adapt to your client's MCP settings UI (ChatGPT Desktop / Claude / Cursor). Do not commit real passwords or tokens.",
+  "mcpServers": {
+    "bankmcp": {
+      "command": "npx",
+      "args": ["-y", "bankmcp"]
+    }
+  }
+}

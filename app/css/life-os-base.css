@@ -1,0 +1,28 @@
+/* Life OS tokens mapped to the existing financial components. */
+:root {
+  color-scheme: dark;
+  --paper:var(--canvas);--paper-2:var(--raised);--ink:var(--text);--ink-2:var(--text);--line-2:var(--line);
+  --serif:var(--font);--sans:var(--font);--neg:var(--danger);--pos:var(--accent);--warn:var(--warning);
+  --accent-soft:var(--raised);--warn-soft:var(--surface);--chart-1:var(--accent);
+  --r-0:var(--radius-sm);--radius-chip:999px;--rule:1px solid var(--line);--rule-strong:1px solid var(--line);
+  --sp-1:var(--space-1);--sp-2:var(--space-2);--sp-3:var(--space-3);--sp-4:var(--space-4);--sp-5:var(--space-6);--sp-6:var(--space-8);--sp-7:var(--space-12);
+  --fs-micro:11px;--fs-caption:12px;--fs-label:12px;--fs-table:13px;--fs-table-s:12px;--fs-h2:28px;--fs-h3:22px;--fs-h4:18px;--fs-stat:clamp(24px,2.5vw,40px);
+  --fw-regular:500;--fw-semibold:650;--lh-tight:1.15;--track-heading:-.04em;--track-label:.04em;--measure-wide:1600px;
+}
+:root[data-theme=light]{color-scheme:light}
+html { background:var(--canvas); }
+body { margin:0; font-family:var(--font); font-size:14px; line-height:1.6; background:var(--canvas); color:var(--text); }
+a { color:var(--accent); }
+button,input,select,textarea { font:inherit; }
+button,input:not([type=checkbox]),select { min-height:44px; }
+input,select,textarea { color:var(--text); background:var(--raised); border:1px solid var(--line); border-radius:var(--radius-sm); padding:var(--space-2) var(--space-3); max-width:100%; }
+input[type=checkbox] { width:20px; height:20px; accent-color:var(--accent); }
+th { background:var(--surface); color:var(--muted); text-align:left; font-weight:600; }
+th,td { padding:var(--space-3); border-bottom:1px solid var(--line); vertical-align:top; }
+code { font-size:12px; overflow-wrap:anywhere; }
+:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+button:disabled { opacity:.45; cursor:default; }
+.chip { display:inline-flex; gap:var(--space-1); border:1px solid var(--line); border-radius:var(--radius-chip); padding:var(--space-1) var(--space-3); font-size:12px; color:var(--muted); }
+.skip-link { position:fixed; top:-100px; z-index:100; padding:var(--space-4); background:var(--accent); color:var(--on-accent); }
+.skip-link:focus { top:0; }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

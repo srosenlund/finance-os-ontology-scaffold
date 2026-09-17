@@ -1,0 +1,27 @@
+{
+  "format": "providers-local/1",
+  "note": "Example only. Copy to providers.local.json (gitignored).",
+  "providers": [
+    {
+      "id": "pdf_app_local",
+      "kind": "browser_local_upload",
+      "maps_to_system": "private_archive",
+      "note": "Primary: upload zones in /app/ → IndexedDB + localStorage manifest"
+    },
+    {
+      "id": "pdf_inbox",
+      "kind": "pdf_folder",
+      "path": "local/pdfs/inbox",
+      "maps_to_system": "private_archive",
+      "note": "Fallback / Codex bridge after export from the app"
+    },
+    {
+      "id": "cash_bankmcp_local",
+      "kind": "mcp",
+      "command": "npx",
+      "args": ["-y", "bankmcp"],
+      "maps_to_system": "cash_source",
+      "note": "Locally hosted BankMCP — see docs/BANKMCP-LOKALT.md"
+    }
+  ]
+}

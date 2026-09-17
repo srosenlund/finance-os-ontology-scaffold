@@ -1,0 +1,362 @@
+/* Life OS SoT control plane — flade-first (no nested app skinne). */
+
+.sot-map {
+  --sot-spine-1: var(--accent, #3d5a40);
+  --sot-spine-2: var(--accent-2, #5a4a3d);
+  --sot-spine-3: var(--link, #2f5d7a);
+  --sot-spine-4: var(--ok, #2a7a4b);
+  --sot-spine-5: var(--warn, #9a6b1f);
+  --sot-spine-6: var(--text-muted, #6b655c);
+  --sot-plan: var(--raised, var(--surface, #fff));
+  --sot-papir: var(--bg, transparent);
+  --sot-linje: var(--line, color-mix(in srgb, var(--text, #1a1814) 12%, transparent));
+  --sot-ink: var(--text, #1a1814);
+  --sot-ink2: var(--text-muted, #6b655c);
+  --sot-radius: var(--radius-card, 12px);
+}
+
+.sot-flade-first {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  max-width: 1240px;
+  background: var(--sot-papir);
+}
+
+.sot-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin: 0 0 18px;
+}
+
+.sot-eyebrow {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sot-ink2);
+}
+
+.sot-flade-first h1 {
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 620;
+  letter-spacing: -.024em;
+  margin: 0;
+  color: var(--sot-ink);
+  text-wrap: balance;
+}
+
+.sot-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-size: 11px;
+  color: var(--sot-ink2);
+}
+
+.sot-seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.sot-seg-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  margin: 0;
+  border: 1px solid var(--sot-linje);
+  border-radius: 12px;
+  background: var(--sot-plan);
+  color: var(--sot-ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background .12s, border-color .12s, color .12s;
+}
+
+.sot-seg-btn:hover {
+  background: var(--surface, var(--sot-plan));
+  border-color: var(--accent, currentColor);
+}
+
+.sot-seg-btn:focus-visible {
+  outline: 3px solid var(--accent, #3d5a40);
+  outline-offset: 2px;
+}
+
+.sot-seg-btn.is-on,
+.sot-seg-btn[aria-current="true"],
+.sot-seg-btn[aria-pressed="true"].is-on {
+  background: var(--accent, #3d5a40);
+  border-color: var(--accent, #3d5a40);
+  color: var(--on-accent, #fff);
+  font-weight: 650;
+}
+
+.sot-seg-btn small {
+  font-size: 11px;
+  opacity: .8;
+}
+
+.sot-chip.is-on {
+  outline: none;
+}
+
+.sot-lead {
+  color: var(--sot-ink2);
+  margin: 0 0 20px;
+  max-width: 70ch;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.sot-lead-sm {
+  color: var(--sot-ink2);
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.sot-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .92em;
+  font-variant-numeric: tabular-nums;
+}
+
+.sot-stribe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1px;
+  background: var(--sot-linje);
+  border: 1px solid var(--sot-linje);
+  border-radius: var(--sot-radius);
+  overflow: hidden;
+  margin: 0 0 24px;
+}
+
+.sot-tal {
+  background: var(--sot-plan);
+  padding: 12px 14px 13px;
+}
+
+.sot-tal u {
+  display: block;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--sot-ink2);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.sot-tal b {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--sot-ink);
+}
+
+.sot-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+  align-items: center;
+}
+
+.sot-note {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent, #3d5a40);
+  background: color-mix(in srgb, var(--bg, #f5f2eb) 90%, #000 4%);
+  border-radius: 0 8px 8px 0;
+}
+
+.sot-note p { margin: 0; color: var(--sot-ink2); font-size: 13.5px; line-height: 1.5; }
+
+.sot-scroll {
+  overflow: auto;
+  border: 1px solid var(--sot-linje);
+  border-radius: var(--sot-radius);
+  background: var(--sot-plan);
+}
+
+.sot-dia { padding: 8px 0; }
+
+.sot-box {
+  fill: var(--sot-plan);
+  stroke: var(--sot-linje);
+  stroke-width: 1.2;
+}
+
+.sot-box.is-hit {
+  stroke: var(--accent, #3d5a40);
+  stroke-width: 2.2;
+}
+
+.sot-hit:focus { outline: none; }
+.sot-hit:focus .sot-box,
+.sot-hit:hover .sot-box {
+  stroke: var(--accent, #3d5a40);
+  stroke-width: 2;
+}
+
+.sot-track { fill: color-mix(in srgb, var(--sot-linje) 80%, transparent); }
+
+.sot-label {
+  font-size: 11px;
+  fill: var(--sot-ink);
+  pointer-events: none;
+}
+
+.sot-muted {
+  font-size: 10px;
+  fill: var(--sot-ink2);
+  color: var(--sot-ink2);
+  pointer-events: none;
+}
+
+.sot-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  fill: var(--sot-ink2);
+  pointer-events: none;
+}
+
+.sot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.sot-card {
+  position: relative;
+  border: 1px solid var(--sot-linje);
+  border-radius: var(--sot-radius);
+  padding: 1rem 1rem 1rem 1.1rem;
+  background: var(--sot-plan);
+  overflow: hidden;
+}
+
+.sot-card.is-focus {
+  border-color: var(--accent, #3d5a40);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent, #3d5a40) 35%, transparent);
+}
+
+.sot-card-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--f, var(--accent));
+}
+
+.sot-card h3 { margin: 0 0 0.45rem; font-size: 1.05rem; color: var(--sot-ink); }
+.sot-card ul { margin: 0.75rem 0 0; padding-left: 1.1rem; }
+.sot-card li { margin-bottom: 0.45rem; color: var(--sot-ink); font-size: 13.5px; }
+
+.sot-mini-stribe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  gap: 8px;
+  margin: 10px 0 4px;
+}
+
+.sot-mini-stribe span {
+  background: color-mix(in srgb, var(--sot-linje) 55%, transparent);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.sot-mini-stribe u {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--sot-ink2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sot-mini-stribe b {
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  color: var(--sot-ink);
+}
+
+.sot-entity {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin: 0.75rem 0;
+}
+
+.sot-ring {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.sot-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--sot-linje) 70%, transparent);
+  color: var(--sot-ink2);
+  vertical-align: middle;
+}
+
+.sot-graf-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .sot-graf-wrap:has(.sot-rail) {
+    grid-template-columns: 1fr minmax(220px, 280px);
+  }
+}
+
+.sot-rail {
+  border: 1px solid var(--sot-linje);
+  border-radius: var(--sot-radius);
+  padding: 1rem;
+  background: var(--sot-plan);
+}
+
+.sot-rail h3 { margin-top: 0; }
+.sot-rail ul { padding-left: 1.1rem; }
+
+.sot-node text { pointer-events: none; }
+
+body[data-life-suite="finance"] #view-ontologi .sot-flade-first {
+  max-width: none;
+}
