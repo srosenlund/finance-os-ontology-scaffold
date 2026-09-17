@@ -26,6 +26,7 @@
     dashboardYear: "2026",
     dashboardMode: "period",
     overrides: {},
+    customRules: [],
     filters: { year: "2026", account: "", cat: "", uncat: false, q: "", page: 0 },
     txnSort: { key: "d", direction: "desc" },
     selectedId: null,
@@ -725,10 +726,13 @@
       </div>` : ""}
       ${active === "general" ? `<section class="dash-panel"><h3>App</h3>
         <p>Basisvaluta: DKK. Tema gemmes som <code>pfd-theme</code>.</p>
-        <p>Tilsidesættelser gemmes som <code>${esc((DATA.ls_keys && DATA.ls_keys.overrides) || "pfd-overrides")}</code>.</p>
+        <p>Tilsidesættelser: <code>${esc((DATA.ls_keys && DATA.ls_keys.overrides) || "pfd-overrides")}</code>.</p>
+        <p>Egne klassifikationsregler (JSON-array): <code>${esc((DATA.ls_keys && DATA.ls_keys.rules) || "pfd-rules")}</code>.</p>
+        <p>Demo-regler i payload: ${(DATA.rules || []).length} med match-strenge (Løn, Husleje, …).</p>
       </section>` : ""}
       ${active === "bank" ? `<section class="dash-panel"><h3>BankMCP</h3>
         <p>Read-only open banking. Start lokalt, tilslut i ChatGPT Desktop, skriv <code>local/bank-view.json</code> (gitignoreret).</p>
+        <p>Uden live-fil bruges automatisk <code>local/bank-view.example.json</code> som overlay.</p>
         <pre><code>./scripts/start-bankmcp.sh</code></pre>
         <p>Status: ${bankOverlayLoaded ? "Overlay indlæst ved start" : "Ingen overlay (demo-cash)"}</p>
         <p><a href="../docs/BANKMCP-LOKALT.md">docs/BANKMCP-LOKALT.md</a></p>
@@ -821,10 +825,11 @@
     } else if (tab === "pdf") {
       body.innerHTML = `
         <section class="dash-panel"><h3>PDF-upload</h3>
-          <p>Filer gemmes i IndexedDB på denne maskine. De opdaterer ikke demo-payloaden.</p>
+          <p>Filer gemmes i IndexedDB på denne maskine. De opdaterer <strong>ikke</strong> demo-payload eller ontologi — det sker først, når du eksporterer til <code>local/pdfs/inbox/</code> og kører Codex-prompten i Del 3.</p>
           <div class="dropzones" id="dropzones"></div>
           <div class="row-actions" style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0">
             <button type="button" class="btn primary" id="btn-export-manifest">Download manifest</button>
+            <button type="button" class="btn" id="btn-export-pdfs">Download PDF’er</button>
             <button type="button" class="btn danger" id="btn-clear-pdfs">Ryd lokale PDF’er</button>
           </div>
           <div id="pdf-list"></div>
@@ -846,6 +851,19 @@
         a.href = URL.createObjectURL(blob);
         a.download = "pdf-manifest.local.json";
         a.click();
+      };
+      body.querySelector("#btn-export-pdfs").onclick = async () => {
+        const all = await idbAll();
+        if (!all.length) { toast("Ingen PDF’er"); return; }
+        for (const row of all) {
+          const blob = new Blob([row.blob], { type: "application/pdf" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = row.name || "dokument.pdf";
+          a.click();
+          URL.revokeObjectURL(a.href);
+        }
+        toast("Download startet — læg filerne i local/pdfs/inbox/ til Codex");
       };
       body.querySelector("#btn-clear-pdfs").onclick = async () => {
         const db = await openDb();
@@ -911,18 +929,66 @@
       const row = byLabel.get(acc.label);
       if (row && acc.booked_balance != null) row.booked = acc.booked_balance;
     }
-    const extra = (view.transactions || []).slice(0, 25).map((t, i) => ({
-      id: "overlay-" + i,
-      d: t.booked_at,
-      a: t.account_label,
-      c: ["Løn", "Husleje", "Dagligvarer", "Transport", "Kaffe", "Streaming", "Forsyning", "Overførsel til opsparing", "Overførsel fra daglig", "Forsikring", "Brændstof", "Apotek", "Restaurant"].includes(t.description) ? t.description : "Restaurant",
-      amt: t.amount,
-      cat: "food",
-      sub: "dining",
-      x: 0,
-    }));
+    const domain = createDomain(DATA, state);
+    const extra = (view.transactions || []).slice(0, 25).map((t, i) => {
+      const classified = domain.classifyDescription(t.description, {
+        cat: "uncategorized",
+        sub: "",
+        x: 0,
+      });
+      const isXfer = classified.cat === "transfer";
+      return {
+        id: "overlay-" + i,
+        d: t.booked_at,
+        a: t.account_label,
+        c: t.description || "Ukategoriseret",
+        amt: t.amount,
+        cat: classified.cat,
+        sub: classified.sub,
+        x: isXfer ? 1 : 0,
+      };
+    });
     DATA.txns = extra.concat(DATA.txns || []);
     bankOverlayLoaded = true;
+  }
+
+  async function mergeLocalSotMap() {
+    try {
+      const res = await fetch("../taxonomy/sot-map.json");
+      if (!res.ok) return;
+      const local = await res.json();
+      const demo = DATA.sot_map || {};
+      if (!local.live && demo.live) local.live = demo.live;
+      const liveById = Object.fromEntries((demo.entities || []).map((e) => [e.id, e]));
+      for (const e of local.entities || []) {
+        const src = liveById[e.id];
+        if (!src) continue;
+        if (!e.live && src.live) e.live = src.live;
+        if (e.live_weight == null && src.live_weight != null) e.live_weight = src.live_weight;
+      }
+      const sysLive = Object.fromEntries((demo.systems || []).map((s) => [s.id, s.live]));
+      for (const s of local.systems || []) {
+        if (!s.live && sysLive[s.id]) s.live = sysLive[s.id];
+      }
+      DATA.sot_map = local;
+    } catch {
+      /* example/demo map stays */
+    }
+  }
+
+  async function loadBankOverlay() {
+    const urls = ["../local/bank-view.json", "../local/bank-view.example.json"];
+    for (const url of urls) {
+      try {
+        const bank = await fetch(url);
+        if (!bank.ok) continue;
+        applyBankOverlay(await bank.json());
+        return url.endsWith("example.json") ? "example" : "live";
+      } catch {
+        /* try next */
+      }
+    }
+    return null;
   }
 
   async function boot() {
@@ -948,16 +1014,21 @@
       return;
     }
     try {
-      const bank = await fetch("../local/bank-view.json");
-      if (bank.ok) applyBankOverlay(await bank.json());
-    } catch {
-      setStatus("Bank-overlay kunne ikke læses");
-    }
-    try {
       state.overrides = JSON.parse(localStorage.getItem((DATA.ls_keys || {}).overrides || "pfd-overrides") || "{}") || {};
     } catch { state.overrides = {}; }
+    try {
+      state.customRules = JSON.parse(localStorage.getItem((DATA.ls_keys || {}).rules || "pfd-rules") || "[]") || [];
+      if (!Array.isArray(state.customRules)) state.customRules = [];
+    } catch { state.customRules = []; }
+    await mergeLocalSotMap();
+    const bankSrc = await loadBankOverlay();
     rebuildDomain();
-    setStatus("Fiktiv husstand · ca. 25.000 kr./md · " + (DATA.as_of || ""));
+    const overlayNote = bankSrc === "example"
+      ? " · bank-example overlay"
+      : bankSrc === "live"
+        ? " · live bank-view"
+        : "";
+    setStatus("Fiktiv husstand · ca. 25.000 kr./md · " + (DATA.as_of || "") + overlayNote);
     const raw = location.hash.replace(/^#\/?/, "");
     const [view, sot] = raw.split("/");
     setView(view || "overblik", sot);

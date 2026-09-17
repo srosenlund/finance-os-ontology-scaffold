@@ -6,6 +6,25 @@
     state = state || {};
     const overrides = state.overrides || {};
 
+    function matchRule(description) {
+      const desc = String(description || "");
+      const rules = (DATA.rules || []).concat(state.customRules || []);
+      for (const rule of rules) {
+        const needles = rule.match || [];
+        if (needles.some((n) => n && desc === n)) {
+          return { cat: rule.cat, sub: rule.sub || "", ruleId: rule.id };
+        }
+      }
+      return null;
+    }
+
+    function classifyDescription(description, fallback) {
+      const hit = matchRule(description);
+      if (hit) return { cat: hit.cat, sub: hit.sub, x: 0, ruleId: hit.ruleId };
+      if (fallback) return fallback;
+      return { cat: "uncategorized", sub: "", x: 0 };
+    }
+
     function effective(t) {
       const ovr = overrides[t.id];
       if (ovr) {
@@ -14,6 +33,10 @@
           sub: ovr.sub != null ? ovr.sub : t.sub,
           x: ovr.x != null ? ovr.x : t.x,
         };
+      }
+      if (!t.cat || t.cat === "uncategorized") {
+        const hit = matchRule(t.c);
+        if (hit) return { cat: hit.cat, sub: hit.sub, x: t.x || 0 };
       }
       return { cat: t.cat, sub: t.sub, x: t.x };
     }
@@ -84,7 +107,14 @@
       const div = (ys.spend && ys.spend.diverse && ys.spend.diverse.total) || 0;
       const pct = ys.spendTotal ? (100 * div) / ys.spendTotal : 0;
       const top = topTxnsForSection("diverse", year);
-      return { div, pct, spendTotal: ys.spendTotal, nUncat: top.length, top };
+      const y = String(year || "");
+      let nUncat = 0;
+      for (const t of DATA.txns || []) {
+        if (!(t.d || "").startsWith(y)) continue;
+        const e = effective(t);
+        if (!e.cat || e.cat === "uncategorized") nUncat += 1;
+      }
+      return { div, pct, spendTotal: ys.spendTotal, nUncat, top };
     }
 
     function topTxnsForSection(sectionId, year) {
@@ -152,6 +182,8 @@
 
     return {
       effective,
+      matchRule,
+      classifyDescription,
       mapToBudget,
       yearSpend,
       diverseStats,

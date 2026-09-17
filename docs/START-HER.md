@@ -134,14 +134,14 @@ Ingen API-nøgler. Senere kan samme ontology-rolle skifte til MCP.
 
 ### C1 — Upload i appen
 
-1. Start UI: `python3 -m http.server 8765` → http://127.0.0.1:8765/app/  
-2. Brug upload-områderne: **Bolig / Forsikring / SKAT / Bil / Andet**  
-3. Filene ligger kun lokalt i browseren (ikke på GitHub)  
-4. Valgfrit til Codex:
-   - **Download manifest** + **Download PDF’er**, eller  
-   - **Gem til valgt mappe…** → peg på `local/pdfs/inbox/`
+1. Start UI: `python3 -m http.server 8765` → http://127.0.0.1:8765/app/#/ingest  
+2. Fanen **PDF**: upload til **Bolig / Forsikring / SKAT / Bil / Andet**  
+3. Filene ligger **kun** i browseren (IndexedDB). De ændrer **ikke** demo-payload eller ontologi.  
+4. Eksport til Codex:
+   - **Download manifest** (JSON), og/eller  
+   - **Download PDF’er** → læg filerne manuelt i `local/pdfs/inbox/`
 
-Filesystem-mappen `local/pdfs/inbox/` er stadig støttet som fallback.
+Filesystem-mappen `local/pdfs/inbox/` er Codex-input. Ontologi opdateres først via prompt C3.
 
 ### C2 — Prompt: registrér PDF-provider (app + lokal storage)
 
@@ -185,7 +185,7 @@ Hvis jeg senere får MCP/API for samme rolle: foreslå providers.local.json-skif
 fra browser_local_upload / pdf_folder → mcp uden at ændre maps_to_system.
 ```
 
-**Færdig når:** Mindst én PDF er uploadet i appen, eksporteret/udtrukket, og ontologien kender kilden.
+**Færdig når:** Mindst én PDF er uploadet i appen, manifesteret/downloadet til `local/pdfs/inbox/`, udtrukket med Codex, og `taxonomy/sot-map.json` kender kilden. Upload alene ændrer ikke ontologien.
 
 ---
 

@@ -33,6 +33,7 @@ ALLOWED_DESC = {
     "Brændstof",
     "Apotek",
     "Restaurant",
+    "Ukategoriseret",
 }
 SKIP_NAMES = {".git", "node_modules", ".venv", "__pycache__"}
 DOC_ALLOW_BANKMCP = {"BankMCP", "Enable Banking"}

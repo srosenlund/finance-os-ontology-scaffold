@@ -2,7 +2,7 @@
   "format": "pfd-demo-payload/1",
   "title": "Personal Finance Dashboard",
   "as_of": "2026-09-01",
-  "note": "Fiktiv husstand. Nettoindkomst ca. 25.000 kr. om måneden. Ikke live data.",
+  "note": "Fiktiv husstand. Nettoindkomst ca. 25.000 kr. om måneden. Ikke live data. Ontologi har demo live-overlay.",
   "kpis": {
     "accounts": 4,
     "txns": 400,
@@ -109,8 +109,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -345.78,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -239,8 +239,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.69,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -359,8 +359,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -344.19,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -489,8 +489,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -339.56,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -609,8 +609,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -335.14,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -739,8 +739,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -333.21,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -859,8 +859,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -334.73,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -989,8 +989,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -338.94,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1109,8 +1109,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -343.69,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1239,8 +1239,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.56,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1359,8 +1359,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.08,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1489,8 +1489,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -342.51,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1609,8 +1609,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -337.66,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1739,8 +1739,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -334.0,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1859,8 +1859,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -333.4,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -1989,8 +1989,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -336.16,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2109,8 +2109,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -340.88,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2239,8 +2239,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -345.16,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2359,8 +2359,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.8,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2489,8 +2489,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -344.98,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2609,8 +2609,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -340.62,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2739,8 +2739,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -335.95,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2859,8 +2859,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -333.34,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -2989,8 +2989,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -334.13,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3109,8 +3109,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -337.91,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3239,8 +3239,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -342.76,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3359,8 +3359,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.2,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3489,8 +3489,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -346.48,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3609,8 +3609,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -343.46,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3739,8 +3739,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -338.68,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3777,10 +3777,10 @@
       "id": "t369",
       "d": "2026-06-22",
       "a": "Neobank forbrug",
-      "c": "Kaffe",
+      "c": "Ukategoriseret",
       "amt": -255.07,
-      "cat": "food",
-      "sub": "dining",
+      "cat": "uncategorized",
+      "sub": "",
       "x": 0
     },
     {
@@ -3859,8 +3859,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -334.57,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -3907,10 +3907,10 @@
       "id": "t381",
       "d": "2026-07-22",
       "a": "Neobank forbrug",
-      "c": "Kaffe",
+      "c": "Ukategoriseret",
       "amt": -261.4,
-      "cat": "food",
-      "sub": "dining",
+      "cat": "uncategorized",
+      "sub": "",
       "x": 0
     },
     {
@@ -3989,8 +3989,8 @@
       "a": "Regninger",
       "c": "Streaming",
       "amt": -333.22,
-      "cat": "insurance",
-      "sub": "premium",
+      "cat": "leisure",
+      "sub": "streaming",
       "x": 0
     },
     {
@@ -4027,10 +4027,10 @@
       "id": "t394",
       "d": "2026-08-22",
       "a": "Neobank forbrug",
-      "c": "Kaffe",
+      "c": "Ukategoriseret",
       "amt": -261.92,
-      "cat": "food",
-      "sub": "dining",
+      "cat": "uncategorized",
+      "sub": "",
       "x": 0
     },
     {
@@ -4124,6 +4124,16 @@
         {
           "id": "salary",
           "label_da": "Løn"
+        }
+      ]
+    },
+    {
+      "id": "leisure",
+      "label_da": "Fritid",
+      "children": [
+        {
+          "id": "streaming",
+          "label_da": "Streaming"
         }
       ]
     },
@@ -4254,6 +4264,11 @@
             "category_id": "health",
             "subcategory_id": "pharmacy",
             "budget_child": "div_andet"
+          },
+          {
+            "category_id": "leisure",
+            "subcategory_id": "streaming",
+            "budget_child": "div_andet"
           }
         ]
       },
@@ -4300,42 +4315,75 @@
     {
       "id": "r-rent",
       "cat": "housing",
-      "sub": "rent"
+      "sub": "rent",
+      "match": [
+        "Husleje"
+      ]
     },
     {
       "id": "r-food",
       "cat": "food",
-      "sub": "groceries"
+      "sub": "groceries",
+      "match": [
+        "Dagligvarer"
+      ]
     },
     {
       "id": "r-sal",
       "cat": "income",
-      "sub": "salary"
+      "sub": "salary",
+      "match": [
+        "Løn"
+      ]
     },
     {
       "id": "r-ins",
       "cat": "insurance",
-      "sub": "premium"
+      "sub": "premium",
+      "match": [
+        "Forsikring"
+      ]
     },
     {
       "id": "r-tr",
       "cat": "transport",
-      "sub": "transit"
+      "sub": "transit",
+      "match": [
+        "Transport"
+      ]
     },
     {
       "id": "r-fuel",
       "cat": "transport",
-      "sub": "fuel"
+      "sub": "fuel",
+      "match": [
+        "Brændstof"
+      ]
     },
     {
       "id": "r-xfer",
       "cat": "transfer",
-      "sub": "savings"
+      "sub": "savings",
+      "match": [
+        "Overførsel til opsparing",
+        "Overførsel fra daglig"
+      ]
     },
     {
       "id": "r-health",
       "cat": "health",
-      "sub": "pharmacy"
+      "sub": "pharmacy",
+      "match": [
+        "Apotek"
+      ]
+    },
+    {
+      "id": "r-stream",
+      "cat": "leisure",
+      "sub": "streaming",
+      "match": [
+        "Streaming"
+      ]
     }
   ],
   "hub_flow": {
@@ -4448,52 +4496,87 @@
       {
         "id": "cash_source",
         "name": "Cash-kilde",
-        "role": "Konti og posteringer"
+        "role": "Konti og posteringer",
+        "live": {
+          "freshness": "frisk",
+          "rows": 400
+        }
       },
       {
         "id": "property_register",
         "name": "Ejendomsregister",
-        "role": "Ejendomme og ejerskabsfacts"
+        "role": "Ejendomme og ejerskabsfacts",
+        "live": {
+          "freshness": "ukendt"
+        }
       },
       {
         "id": "lien_register",
         "name": "Pantsætningsregister",
-        "role": "Registrerede panter og hæftelser"
+        "role": "Registrerede panter og hæftelser",
+        "live": {
+          "freshness": "ukendt"
+        }
       },
       {
         "id": "market_ref",
         "name": "Markedsreference",
-        "role": "Serier / referenceinstrumenter knyttet til lån"
+        "role": "Serier / referenceinstrumenter knyttet til lån",
+        "live": {
+          "freshness": "ukendt"
+        }
       },
       {
         "id": "vehicle_register",
         "name": "Køretøjsregister",
-        "role": "Køretøjer og identifikatorer"
+        "role": "Køretøjer og identifikatorer",
+        "live": {
+          "freshness": "ukendt"
+        }
       },
       {
         "id": "gov_archive",
         "name": "Offentligt arkiv",
-        "role": "Officiel digital post og skattedokumenter"
+        "role": "Officiel digital post og skattedokumenter",
+        "live": {
+          "freshness": "deklareret",
+          "rows": 0
+        }
       },
       {
         "id": "private_archive",
         "name": "Privat arkiv",
-        "role": "Privat dokumentarkiv"
+        "role": "Privat dokumentarkiv",
+        "live": {
+          "freshness": "deklareret",
+          "rows": 0
+        }
       },
       {
         "id": "mail_archive",
         "name": "Mailarkiv",
-        "role": "Mail-vedhæftninger og kvitteringer"
+        "role": "Mail-vedhæftninger og kvitteringer",
+        "live": {
+          "freshness": "ukendt"
+        }
       },
       {
         "id": "policy_archive",
         "name": "Policearkiv",
-        "role": "Forsikringsvilkår"
+        "role": "Forsikringsvilkår",
+        "live": {
+          "freshness": "deklareret",
+          "rows": 0
+        }
       },
       {
         "id": "settings",
         "name": "Indstillinger",
-        "role": "Lokale pegepinde og erklæret Current-tilstand"
+        "role": "Lokale pegepinde og erklæret Current-tilstand",
+        "live": {
+          "freshness": "deklareret",
+          "rows": 0
+        }
       }
     ],
     "spines": [
@@ -4537,7 +4620,11 @@
           "HUSHOLD"
         ],
         "layer": "Cash",
-        "primary_system": "cash_source"
+        "primary_system": "cash_source",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 3
       },
       {
         "id": "txn",
@@ -4547,7 +4634,11 @@
           "HUSHOLD"
         ],
         "layer": "Cash",
-        "primary_system": "cash_source"
+        "primary_system": "cash_source",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 400
       },
       {
         "id": "year_budget",
@@ -4557,7 +4648,11 @@
           "HUSHOLD"
         ],
         "layer": "Cash",
-        "primary_system": "cash_source"
+        "primary_system": "cash_source",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 3
       },
       {
         "id": "property",
@@ -4568,7 +4663,11 @@
         ],
         "layer": "Register",
         "domain": "housing",
-        "primary_system": "property_register"
+        "primary_system": "property_register",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 1
       },
       {
         "id": "housing_loan",
@@ -4579,7 +4678,11 @@
         ],
         "layer": "Current",
         "domain": "housing",
-        "primary_system": "settings"
+        "primary_system": "settings",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 1
       },
       {
         "id": "register_lien",
@@ -4589,7 +4692,11 @@
           "BOLIG"
         ],
         "layer": "Register",
-        "primary_system": "lien_register"
+        "primary_system": "lien_register",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 1
       },
       {
         "id": "bond_series",
@@ -4599,7 +4706,10 @@
           "BOLIG"
         ],
         "layer": "Register",
-        "primary_system": "market_ref"
+        "primary_system": "market_ref",
+        "live": {
+          "status": "hul"
+        }
       },
       {
         "id": "vehicle",
@@ -4610,7 +4720,11 @@
         ],
         "layer": "Register",
         "domain": "vehicle",
-        "primary_system": "vehicle_register"
+        "primary_system": "vehicle_register",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 1
       },
       {
         "id": "vehicle_finance",
@@ -4621,7 +4735,11 @@
         ],
         "layer": "Current",
         "domain": "vehicle",
-        "primary_system": "settings"
+        "primary_system": "settings",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 1
       },
       {
         "id": "insurance_policy",
@@ -4632,7 +4750,11 @@
         ],
         "layer": "Current",
         "domain": "insurance",
-        "primary_system": "policy_archive"
+        "primary_system": "policy_archive",
+        "live": {
+          "status": "landet"
+        },
+        "live_weight": 2
       },
       {
         "id": "tax_statement",
@@ -4643,7 +4765,11 @@
         ],
         "layer": "Current",
         "domain": "tax",
-        "primary_system": "gov_archive"
+        "primary_system": "gov_archive",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 2
       },
       {
         "id": "property_tax",
@@ -4655,7 +4781,11 @@
         ],
         "layer": "Current",
         "domain": "tax",
-        "primary_system": "gov_archive"
+        "primary_system": "gov_archive",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 1
       },
       {
         "id": "archive_doc",
@@ -4665,7 +4795,10 @@
           "FAELLES"
         ],
         "layer": "Arkiv",
-        "primary_system": "gov_archive"
+        "primary_system": "gov_archive",
+        "live": {
+          "status": "hul"
+        }
       },
       {
         "id": "settings_pointer",
@@ -4675,7 +4808,11 @@
           "FAELLES"
         ],
         "layer": "Current",
-        "primary_system": "settings"
+        "primary_system": "settings",
+        "live": {
+          "status": "delvist"
+        },
+        "live_weight": 1
       }
     ],
     "relations": [
@@ -4810,67 +4947,80 @@
       {
         "system": "cash_source",
         "target": "HUSHOLD",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 1
       },
       {
         "system": "cash_source",
         "target": "household_account",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 1
       },
       {
         "system": "cash_source",
         "target": "txn",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 1
       },
       {
         "system": "property_register",
         "target": "BOLIG",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "property_register",
         "target": "property",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "lien_register",
         "target": "register_lien",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "market_ref",
         "target": "bond_series",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "vehicle_register",
         "target": "MOBILITET",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "vehicle_register",
         "target": "vehicle",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "gov_archive",
         "target": "SKAT",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "gov_archive",
         "target": "archive_doc",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "private_archive",
         "target": "archive_doc",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "mail_archive",
         "target": "archive_doc",
-        "kind": "measured"
+        "kind": "measured",
+        "live_weight": 0.5
       },
       {
         "system": "policy_archive",
@@ -4902,7 +5052,12 @@
         "target": "settings_pointer",
         "kind": "declared"
       }
-    ]
+    ],
+    "live": {
+      "overlay_at": "2026-09-01T12:00:00Z",
+      "measured_at": "2026-09-01T12:00:00Z",
+      "note": "Demo-overlay: cash er landet; Current/Register delvist fra dokumenterede datakrav."
+    }
   },
   "ingest": {
     "requirements": {

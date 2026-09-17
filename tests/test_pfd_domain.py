@@ -79,7 +79,7 @@ class DomainTests(unittest.TestCase):
         self.assertLess(share["mad"], 0.34)
         self.assertGreater(share["transport"], 0.04)
         self.assertLess(share["transport"], 0.14)
-        self.assertGreater(share["forsikring"], 0.03)
+        self.assertGreater(share["forsikring"], 0.025)
         self.assertLess(share["forsikring"], 0.10)
 
     def test_2025_spend_cards_sum_to_total(self):
@@ -107,6 +107,27 @@ class DomainTests(unittest.TestCase):
         cash = json.loads(domain_eval("domain.insuranceCash('2025')"))
         self.assertAlmostEqual(cash["total"], mix["spend"]["forsikring"]["total"], places=2)
         self.assertGreater(len(cash["transactions"]), 0)
+
+    def test_streaming_is_not_insurance(self):
+        data = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+        for t in data["txns"]:
+            if t.get("c") == "Streaming":
+                self.assertEqual(t["cat"], "leisure", t)
+                self.assertEqual(t["sub"], "streaming", t)
+
+    def test_rules_match_salary_description(self):
+        hit = json.loads(domain_eval("domain.classifyDescription('Løn')"))
+        self.assertEqual(hit["cat"], "income")
+        self.assertEqual(hit["sub"], "salary")
+
+    def test_sot_map_has_demo_live_overlay(self):
+        data = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+        entities = data["sot_map"]["entities"]
+        statuses = [e.get("live", {}).get("status") for e in entities]
+        self.assertIn("landet", statuses)
+        self.assertGreaterEqual(statuses.count("landet"), 4)
+        self.assertLess(statuses.count("hul"), len(entities))
+        self.assertTrue(data["sot_map"].get("live", {}).get("overlay_at"))
 
 
 if __name__ == "__main__":
